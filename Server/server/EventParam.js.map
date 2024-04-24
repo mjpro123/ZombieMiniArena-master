@@ -1,0 +1,1 @@
+{"version":3,"sources":["server/EventParam.js","../src/ts/server/EventParam.ts"],"names":["Object","defineProperty","exports","value","EventParam"],"mappings":"AAAA,aACAA,OAAOC,eAAeC,QAAS,aAAc,CAAEC,OAAO,IACtDD,QAAQE,gBAAa,ECFrB,MAAaA,YAAbF,QAAAE,WAAAA","file":"EventParam.js","sourceRoot":"../"}

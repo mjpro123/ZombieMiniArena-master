@@ -1,0 +1,22 @@
+[
+    {
+        "Token": "TestingToken",
+        "Token_ID": "TestingTok",
+        "Inventory": [
+            ["Item_Number_1", 5],
+            ["Item_Number_2", 1],
+            ["Item_Number_3", 1],
+            ["Item_Number_4", 1]
+        ]
+    },
+    {
+        "Token": "TestingToken2",
+        "Token_ID": "TestingTok2",
+        "Inventory": [
+            ["Item_Number_1", 5],
+            ["Item_Number_2", 1],
+            ["Item_Number_3", 1],
+            ["Item_Number_4", 1]
+        ]
+    }
+]       

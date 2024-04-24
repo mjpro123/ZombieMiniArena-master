@@ -1,0 +1,117 @@
+[
+    {
+        "name": "booster",
+        "description": "Receive Kit Command",
+        "options": [
+          {
+            "name": "id",
+            "description": "The ID (Player ID)",
+            "type": 4,
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "manager",
+        "description": "Receive Kit Command",
+        "options": [
+          {
+            "name": "id",
+            "description": "The ID (Player ID)",
+            "type": 4,
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "architect",
+        "description": "Receive Kit Command",
+        "options": [
+          {
+            "name": "id",
+            "description": "The ID (Player ID)",
+            "type": 4,
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "janitor",
+        "description": "Receive Kit Command",
+        "options": [
+          {
+            "name": "id",
+            "description": "The ID (Player ID)",
+            "type": 4,
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "purchase",
+        "description": "Give Someone An Item",
+        "options": [
+          {
+            "name": "user",
+            "description": "The User",
+            "type": 6,
+            "required": true
+          },
+          {
+            "name": "type",
+            "description": "The Item",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {"name": "Midas Kit", "value": "midas"},
+              {"name": "Blue Crown", "value": "blue_crown"},
+              {"name": "Booster Kit", "value": "boostkit"},
+              {"name": "Fireflys", "value": "firefly"},
+              {"name": "Flower Hat", "value": "flowerhat"},
+              {"name": "Blue Gems", "value": "bgems"},
+              {"name": "Blue Crown Kit", "value": "crownkit"}
+            ]
+          },
+          {
+            "name": "amount",
+            "description": "The Amount",
+            "type": 4,
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "use",
+        "description": "Use Your Shop Item",
+        "options": [
+          {
+            "name": "amount",
+            "description": "The Amount",
+            "type": 4,
+            "required": true
+          },
+          {
+            "name": "type",
+            "description": "The Item",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {"name": "Midas Kit", "value": "midas"},
+              {"name": "Blue Crown", "value": "blue_crown"},
+              {"name": "Booster Kit", "value": "boostkit"},
+              {"name": "Fireflys", "value": "firefly"},
+              {"name": "Flower Hat", "value": "flowerhat"},
+              {"name": "Blue Gems", "value": "bgems"},
+              {"name": "Blue Crown Kit", "value": "crownkit"}
+            ]
+          },
+          {
+            "name": "id",
+            "description": "The ID (Player ID)",
+            "type": 4,
+            "required": true
+          }
+        ]
+      }
+  ]
+    

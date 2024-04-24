@@ -1,0 +1,369 @@
+[
+    {
+        "taken": "COOKIE",
+        "received": [
+            ["SWORD_DIAMOND", 1], 
+            ["DIAMOND_HELMET", 1],
+            ["PILOT_HELMET", 1],
+            ["SUPER_HAMMER", 1], 
+            ["DIAMOND_SHIELD", 1],
+            ["DRAGON_BOW", 1],
+            ["DRAGON_ARROW", 5],
+            ["HAWK", 1],
+            ["WAND1", 1],
+            ["WAND2", 1],
+            ["CHRISTMAS_HAT", 1]
+        ],
+        "type": "consume",
+        "teleport": [],
+        "regen_health": 0
+    },
+    {
+        "taken": "BOTTLE_FULL",
+        "received": [],
+        "type": "consume",
+        "teleport": [8.4, 6.4],
+        "regen_health": 200
+    },
+    {
+        "position": [14, 41],
+        "teleport": [96.8, 32.5],
+        "cost": [[]],
+        "sub": [["FLOWER_HAT", 1]],
+        "type": "teleport"
+    },
+    {
+        "position": [31, 51],
+        "teleport": [71, 85],
+        "cost": [["GEMME_ORANGE", 1]],
+        "sub": [["GEMME_ORANGE", 1]],
+        "type": "teleport"
+    },
+    {
+        "position": [33, 8],
+        "teleport": [71, 65],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [71, 66],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [35, 51],
+        "teleport": [49, 67],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [58, 66],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [14, 18],
+        "teleport": [7, 20],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [4, 6],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [92, 32],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [8, 18],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [70, 85],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [44, 53],
+        "teleport": ["RANDOM"],
+        "cost": [[]],
+        "sub": [[]],
+        "type": "teleport"
+    },
+    {
+        "position": [8, 6],
+        "regen": [200],
+        "type": "heal",
+        "cost": [["BOTTLE_EMPTY", 1]]
+    },
+    {
+        "position": [96, 32],
+        "regen": [200],
+        "type": "heal",
+        "cost": [["FLOWER_HAT", 1]]
+    },
+    {
+        "received": [
+            ["CROWN_BLUE", 1]
+
+        ],
+        "position": [
+            88, 32
+        ],
+        "alert": "",
+        "type": "lava_kit"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["PEASANT", 1],
+            ["SEED", 10]
+        ],
+        "position": [
+            50, 17
+        ],
+        "alert": "Trade an orange gem for farmer kit",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["WOOD_BOW", 1],
+            ["WOOD_ARROW", 5]
+        ],
+        "position": [
+            50, 19
+        ],
+        "alert": "Trade an orange gem for wood bow",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["PILOT_HELMET", 1]
+        ],
+        "position": [
+            50, 21
+        ],
+        "alert": "Trade an orange gem for pilot helmet",
+        "type": "trade"
+    },
+        {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["PILOT_HELMET", 1]
+        ],
+        "position": [
+            50, 21
+        ],
+        "alert": "Trade an orange gem for pilot helmet",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 2]],
+        "received": [
+            ["DIAMOND_BOW", 1],
+            ["DIAMOND_ARROW", 5]
+        ],
+        "position": [
+            50, 25
+        ],
+        "alert": "Trade 2 orange gems for a diamond bow",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["SADDLE", 1]
+        ],
+        "position": [
+            50, 36
+        ],
+        "alert": "Trade an orange gem for a saddle",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 1]],
+        "received": [
+            ["REIDITE_HELMET", 1],
+            ["REIDITE_SPEAR", 1]
+        ],
+        "position": [
+            50, 38
+        ],
+        "alert": "Trade an orange gem for reidite Items",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 2]],
+        "received": [
+            ["DRAGON_ORB", 1],
+            ["WELL", 1]
+        ],
+        "position": [
+            50, 40
+        ],
+        "alert": "Trade an orange gem for dragon orb and well",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_BLUE", 2]],
+        "received": [
+            ["DRAGON_BOW", 1],
+            ["DRAGON_ARROW", 5]
+        ],
+        "position": [
+            50, 42
+        ],
+        "alert": "Trade 2 blue gems for dragon bow",
+        "type": "trade"
+    },
+    {
+        "taken": [["CANDY", 1000]],
+        "received": [
+            ["GEMME_BLUE", 1]
+        ],
+        "position": [
+            40, 2
+        ],
+        "alert": "Trade 1,000 candy for one blue gem",
+        "type": "trade"
+    },
+    {
+        "taken": [["CANDY", 2500]],
+        "received": [
+            ["SUPER_DIVING_SUIT", 1]
+        ],
+        "position": [
+            42, 2
+        ],
+        "alert": "Trade 2,500 candy for super diving mask",
+        "type": "trade"
+    },    
+    {
+        "taken": [["CANDY", 7500]],
+        "received": [
+            ["HAWK", 1]
+        ],
+        "alert": "Trade 7,500 candy for a hawk",
+        "position": [
+            44, 2
+        ],
+        "type": "trade"
+    },    
+    {
+        "taken": [["CANDY", 7500]],
+        "received": [
+            ["DIAMOND_HELMET", 1]
+        ],
+        "position": [
+            46, 2
+        ],
+        "alert": "Trade 7,500 candy for a diamond helmet",
+        "type": "trade"
+    },    
+    {
+        "taken": [["CANDY", 7500]],
+        "received": [
+            ["SWORD_DIAMOND", 1]
+        ],
+        "position": [
+            48, 2
+        ],
+        "alert": "Trade 7,500 candy for diamond sword",
+        "type": "trade"
+    },    
+    {
+        "taken": [["CANDY", 10000]],
+        "received": [
+            ["CROWN_BLUE", 1]
+        ],
+        "position": [
+            50, 2
+        ],
+        "alert": "Trade 10,000 candy for a blue crown",
+        "type": "trade"
+    },    
+    {
+        "taken": [["GOLD_HELMET", 1]],
+        "received": [
+            ["PIRATE_HAT", 1]
+        ],
+        "position": [
+            52, 2
+        ],
+        "alert": "Trade gold helmet for a Pirate Hat",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_ORANGE", 12]],
+        "received": [
+            ["GEMME_BLUE", 1]
+        ],
+        "position": [
+            4, 21
+        ],
+        "alert": "Trade 12 orange gems for a blue gem",
+        "type": "trade"
+    },
+    {
+        "taken": [["GEMME_BLUE", 1]],
+        "received": [
+            ["GEMME_ORANGE", 6]
+        ],
+        "position": [
+            4, 19
+        ],
+        "alert": "Trade a blue gem for 6 orange gems",
+        "type": "trade"
+    },
+    {
+        "gambled": ["CANDY", 10000],
+        "position": [
+            69, 62
+        ],
+        "alert": "Gamble 10,000 candy, Double it or Lose it!",
+        "win_chance": 50,
+        "earn_back": 2,
+        "type": "gamble"
+    },
+    {
+        "gambled": ["HAWK", 1],
+        "position": [
+            71, 62
+        ],
+        "alert": "Gamble a Hawk, Double it or Lose it!",
+        "win_chance": 50,
+        "earn_back": 2,
+        "type": "gamble"
+    },    
+    {
+        "gambled": ["GEMME_BLUE", 10],
+        "position": [
+            73, 62
+        ],
+        "alert": "Gamble 10 Blue Gems, Double it or Lose it!",
+        "win_chance": 50,
+        "earn_back": 2,
+        "type": "gamble"
+    }
+]

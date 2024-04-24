@@ -1,0 +1,154 @@
+{
+  "booster": [
+    {
+      "name": "BABY_DRAGON",
+      "amount": 1
+    },
+    {
+      "name": "PILOT_HELMET",
+      "amount": 1
+    },
+    {
+      "name": "PIRATE_HAT",
+      "amount": 1
+    },
+    {
+      "name": "PIRATE_SWORD",
+      "amount": 1
+    },
+    {
+      "name": "HAMMER_REIDITE",
+      "amount": 1
+    },
+    {
+      "name": "GEMME_ORANGE",
+      "amount": 1
+    },
+    {
+      "name": "WOOD",
+      "amount": 10000
+    },
+    {
+      "name": "TURBAN1",
+      "amount": 1
+    },
+    {
+      "name": "BANDAGE",
+      "amount": 1
+    },
+    {
+      "name": "CROWN_GREEN",
+      "amount": 1
+    }
+  ],
+  "architect": [
+    { "name": "BABY_LAVA", "amount": 1 },
+    { "name": "PAPER", "amount": 60000 },
+    { "name": "FIREFLY", "amount": 60000 },
+    { "name": "WOOD_DOOR_SPIKE", "amount": 60000 },
+    { "name": "SPIKE", "amount": 60000 },
+    { "name": "REIDITE_DOOR", "amount": 60000 },
+    { "name": "HAMMER", "amount": 1 },
+    { "name": "SUPER_HAMMER", "amount": 1 },
+    { "name": "WOOD_SPEAR", "amount": 1 },
+    { "name": "PAPER", "amount": 60000 },
+    { "name": "WOOD", "amount": 60000 },
+    { "name": "WOOD", "amount": 60000 },
+    { "name": "WOOD", "amount": 60000 },
+    { "name": "WOOD", "amount": 60000 },
+    { "name": "WINTER_PEASANT", "amount": 1 }
+  ],
+  "janitor": [
+    { "name": "BOAT", "amount": 1 },
+    { "name": "HAMMER", "amount": 1 },
+    { "name": "PAPER", "amount": 100 },
+    { "name": "WOOD_SPEAR", "amount": 1 },
+    { "name": "WINTER_PEASANT", "amount": 1 },
+    { "name": "BABY_LAVA", "amount": 1 }
+  ],
+  "manager": [
+    {
+      "name": "BABY_LAVA",
+      "amount": 1
+    },
+    {
+      "name": "PILOT_HELMET",
+      "amount": 1
+    },
+    {
+      "name": "FIREFLY",
+      "amount": 100000
+    },
+    {
+      "name": "HAMMER",
+      "amount": 1
+    },
+    {
+      "name": "SPEAR",
+      "amount": 1
+    },
+    {
+      "name": "BOAT",
+      "amount": 1
+    },
+    {
+      "name": "PAPER",
+      "amount": 100000
+    }
+  ],
+  "crownkit": [
+      {
+        "name": "BABY_DRAGON",
+        "amount": 1
+      },
+      {
+        "name": "PIRATE_HAT",
+        "amount": 1
+      },
+      {
+        "name": "PIRATE_SWORD",
+        "amount": 1
+      },
+      {
+        "name": "SWORD_GOLD",
+        "amount": 1
+      },
+      {
+        "name": "HAMMER_REIDITE",
+        "amount": 1
+      },
+      {
+        "name": "TURBAN1",
+        "amount": 1
+      },
+      {
+        "name": "FIREFLY",
+        "amount": 50
+      },
+      {
+        "name": "CROWN_GREEN",
+        "amount": 1
+      },
+      {
+        "name": "CROWN_BLUE",
+        "amount": 1
+      },
+      {
+        "name": "RESURRECTION",
+        "amount": 5
+      } 
+  ],
+  "midas": [
+    { "name": "SWORD_DIAMOND", "amount": 1}, 
+    { "name": "DIAMOND_HELMET", "amount": 1},
+    { "name": "PILOT_HELMET", "amount": 1},
+    { "name": "SUPER_HAMMER", "amount": 1}, 
+    { "name": "DIAMOND_SHIELD", "amount": 1},
+    { "name": "DRAGON_BOW", "amount": 1},
+    { "name": "DRAGON_ARROW", "amount": 5},
+    { "name": "HAWK", "amount": 1},
+    { "name": "WAND1", "amount": 1},
+    { "name": "WAND2", "amount": 1},
+    { "name": "CHRISTMAS_HAT", "amount": 1}
+  ]
+}

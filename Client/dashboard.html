@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+      <!-- css -->
+      <link rel="stylesheet" href="dashboard/src/css/main.css">
+      <!-- js -->
+      <script src="dashboard/src/js/dashboard.js"></script>-
+      <!-- cosmetics -->
+      <script src="dashboard/src/js/cosmetics.js"></script>
+   </head>
+   <body>
+      <div id="main">
+         <span id="top">
+            <h1>Coldd.fun</h1>
+         </span>
+         <div id="content">
+            <p>Lets get you logged in</p>
+            <div class="input-container">
+               <input id="key" class="key" type="text" placeholder="Enter account key" maxlength="15" />
+               <p for="key" class="input-footer"></p>
+            </div>
+         </div>
+         <span id="bottom">
+            <button id="create-account" onclick="Dashboard.load_page('register')">Create account</button>
+            <button id="login" onclick="Dashboard.login()">Login</button>
+         </span>
+      </div>
+   </body>
+</html>

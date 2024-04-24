@@ -1,0 +1,2468 @@
+{
+  "viewport": {
+    "width_max": 2560,
+    "height_max": 1800
+  },
+  "server": {
+    "name": "ZMA [v1]",
+    "playerLimit": 100,
+    "socketLimit": 100,
+    "buildingLimit": 1000
+  },
+  "protection": {
+    "throttleDelay": 1000,
+    "throttleAmount": 10
+  },
+  "viplist": {
+    "price1": [],
+    "price2": []
+  },
+  "inventory": {
+    "startSize": 16,
+    "withBag": true,
+    "bagSize": 16
+  },
+  "other": {
+    "player_speed": 24,
+    "weapon_player_speed": 18,
+    "speed_attacking": 3,
+    "weapon_water_speed": 10,
+    "weater_speed": 18,
+    "collide_speed": 10,
+    "hand_damage": 5,
+    "buildCooldown": 999,
+    "totemCooldown": 10000,
+    "dropCooldown": 209,
+    "plantLifetime": 7.2e+6,
+    "dayInMilliseconds": 480000,
+    "max_treasure": 0,
+    "max_aloe_vera": 15,
+    "max_krakens": 0,
+    "max_wolfs": 0,
+    "max_spiders": 2,
+    "max_fishs": 0,
+    "max_fireflys": 20,
+    "max_baby_dragons": 3,
+    "max_dragons": 3, 
+    "max_gifts": 5,
+    "max_winter_wolfs": [3, 3]
+  },
+
+  "items_priority": {
+    "default": ["SWORD_WOOD", "BANDAGE", "PLANT"],
+    "common": [
+      "BIG_FIRE",
+      "BREAD_OVEN",
+      "WORKBENCH",
+      "BANDAGE",
+      "CHEST",
+      "LOCK",
+      "ROOF",
+      "PLOT",
+      "CARROT_SEED",
+      "TOMATO_SEED",
+      "GARLIC_SEED",
+      "WATERMELON_SEED",
+      "PUMPKIN_SEED",
+      "THORNBUSH_SEED",
+      "EARMUFFS",
+      "PEASANT",
+      "EXPLORER_HAT",
+      "SHOVEL_GOLD",
+      "GOLD_SPEAR",
+      "SWORD_GOLD",
+      "SWORD",
+      "HAMMER_GOLD",
+      "GOLD_HELMET",
+      "CORD",
+      "SCALES",
+      "SPANNER",
+      "MACHETE",
+      "PITCHFORK"
+    ],
+    "rare": [
+      "SWORD_AMETHYST",
+      "SWORD_DIAMOND",
+      "LOCKPICK",
+      "AMETHYST_HELMET",
+      "DIAMOND_HELMET",
+      "AMETHYST_SPEAR",
+      "DIAMOND_SPEAR",
+      "DIVING_MASK",
+      "PIRATE_HAT",
+      "HOOD",
+      "SHOVEL_AMETHYST",
+      "SHOVEL_DIAMOND",
+      "PICK_AMETHYST",
+      "PICK_DIAMOND",
+      "HAMMER_AMETHYST",
+      "HAMMER_DIAMOND",
+      "BOOK",
+      "WINDMILL",
+      "RESURRECTION"
+    ],
+    "super_rare": [
+      "KRAKEN_SKIN",
+      "SUPER_HAMMER",
+      "BED",
+      "SUPER_DIVING_SUIT",
+      "PIRATE_SWORD"
+    ]
+  },
+  "entities": {
+    "player": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "speed_weapon": 18,
+      "speed_water": 15,
+      "speed_water_weapon": 10,
+      "speed_water_diving": 18,
+      "speed_water_suit": 20,
+      "speed_winter": 20,
+      "speed_winter_weapon": 16,
+      "speed_attack_decrease": 2,
+      "collide_speed": 10,
+      "mount_equip_reset": 0,
+      "hitbox_size": 25
+    },
+    "boar": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 25,
+      "damage": 50,
+      "drop": ["FUR_BOAR"],
+      "give_score": 150,
+      "allowedBiomes": ["FOREST", "WINTER", "DRAGON"]
+    },
+    "rabbit": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 25,
+      "damage": 0,
+      "drop": [
+        ["FUR", 1],
+        ["MEAT", 1]
+      ],
+      "give_score": 150,
+      "allowedBiomes": ["FOREST"]
+    },
+    "wolf": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 20,
+      "damage": 40,
+      "drop": [["FIREFLY", 2]],
+      "give_score": 150
+    },
+    "fox": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 20,
+      "damage": 80,
+      "speed": 21,
+      "range": 30,
+      "health": 300,
+      "drop": [["FIREFLY", 5]],
+      "give_score": 150,
+      "allowedBiomes": ["WINTER"],
+      "Location": "Winter"
+    },
+    "bear": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 20,
+      "damage": 40,
+      "speed": 18,
+      "range": 30,
+      "health": 350,
+      "drop": [["FIREFLY", 10]],
+      "give_score": 150,
+      "allowedBiomes": ["WINTER"],
+      "Location": "Winter"
+    },
+    "piranha": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 20,
+      "damage": 40,
+      "drop": [
+        ["FOODFISH", 2],
+        ["SCALES", 1]
+      ],
+      "give_score": 150,
+      "allowedBiomes": ["SEA"]
+    },
+    "kraken": {
+      "speed_forest_default": 25,
+      "speed_collides": 10,
+      "hitbox_size": 20,
+      "damage": 80,
+      "drop": [
+        ["KRAKEN_SKIN", 1],
+        ["SCALES", 5]
+      ],
+      "give_score": 3000,
+      "allowedBiomes": ["SEA"]
+    },
+    "spider": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "hitbox_size": 40,
+      "damage": 30,
+      "drop": [["FIREFLY", 10], ["CORD", 20]],
+      "give_score": 0,
+      "allowedBiomes": ["FOREST"],
+      "speed": 14,
+      "range": 30,
+      "health": 600,
+      "Location": "Forest"
+    },
+    "baby_dragon": {
+      "speed_forest_default": 24,
+      "speed_collides": 10,
+      "radius": 30,
+      "hitbox_size": 30,
+      "damage": 35,
+      "drop": [["FIREFLY", 10]],
+      "give_score": 1500,
+      "health": 300,
+      "speed": 28,
+      "taming_chance": 5,
+      "crown_taming_chance": 10,
+      "Location": "Cave"
+    },
+    "dragon": {
+      "speed_forest_default": 23,
+      "speed_collides": 10,
+      "radius": 40,
+      "hitbox_size": 40,
+      "damage": 80,
+      "drop": [["FIREFLY", 25]],
+      "give_score": 150000,
+      "health": 1200,
+      "speed": 22,
+      "Location": "Winter",
+      "building_damage": 200
+    },
+    "treasure_chest": {
+      "radius": 40,
+      "health": 350
+    },
+    "aloe_vera_mob": {
+      "radius": 40,
+      "biome": "desert",
+      "reward": 5
+    },
+    "firefly": {
+      "speed_forest_default": 30,
+      "speed_collides": 10,
+      "hitbox_size": 15,
+      "damage": 30,
+      "drop": [["FIREFLY", 10]],
+      "give_score": 10000,
+      "allowedBiomes": ["FOREST"]
+    }
+  },
+  "items": [
+    {
+      "name": "PLANT",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 20 }
+    },
+    {
+      "name": "BOTTLE_FULL",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {
+        "value": 0,
+        "water": 55
+      }
+    },
+    {
+      "name": "FIREFLY",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "BOTTLE_EMPTY",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "FUR",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "FUR_WOLF",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "WATERING_CAN",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "LOCKPICK",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {
+        "give_score": 20000
+      }
+    },
+    {
+      "name": "FLOUR",
+      "type": "nothing",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "WILDWHEAT",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 20,
+        "born_time": 120000,
+        "grow_time": 55000,
+        "drain_time": 1.2e+6,
+        "score_give": 35
+      }
+    },
+    {
+      "name": "ALOE_VERA_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 20,
+        "born_time": 0,
+        "grow_time": 0,
+        "drain_time": 1.2e+6,
+        "score_give": 35
+      }
+    },
+    {
+      "name": "WHEAT_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 20,
+        "born_time": 0,
+        "grow_time": 16000,
+        "drain_time": 120000,
+        "score_give": 6
+      }
+    },
+    {
+      "name": "GARLIC_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 20,
+        "born_time": 240000,
+        "grow_time": 70000,
+        "drain_time": 100000,
+        "score_give": 6
+      }
+    },
+    {
+      "name": "THORNBUSH_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 35,
+        "born_time": 240000,
+        "grow_time": 15000,
+        "drain_time": 180000,
+        "score_give": 9,
+        "collideResolveRadius": 35,
+        "collideDamage": 20
+      }
+    },
+    {
+      "name": "TOMATO_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 15,
+        "born_time": 240000,
+        "grow_time": 30000,
+        "drain_time": 100000,
+        "score_give": 8
+      }
+    },
+    {
+      "name": "WATERMELON_SEED",
+      "type": "building",
+      "meta_type": "plant",
+      "data": {
+        "health": 700,
+        "placeRadius": 40,
+        "damageProtection": 6,
+        "radius": 25,
+        "born_time": 240000,
+        "grow_time": 180000,
+        "drain_time": 200000,
+        "score_give": 10
+      }
+    },
+    {
+      "name": "TOMATO",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "PUMPKIN",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { 
+        "value": 30
+      }
+    },
+    {
+      "name": "CANDY",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { 
+        "value": 30
+      }
+    },
+    {
+      "name": "CARROT",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 20 }
+    },
+    {
+      "name": "TOMATO",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 16 }
+    },
+    {
+      "name": "WATERMELON",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {
+        "value": 20,
+        "water": 25
+      }
+    },
+    {
+      "name": "BREAD",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 15 }
+    },
+    {
+      "name": "COOKIE",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 30 }
+    },
+    {
+      "name": "GARLIC",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 15 }
+    },
+    {
+      "name": "CAKE",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 200 }
+    },
+    {
+      "name": "SANDWITCH",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 200 }
+    },
+    {
+      "name": "MEAT",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {
+        "value": 30,
+        "poison": 20
+      }
+    },
+    {
+      "name": "FOODFISH",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {
+        "value": 30,
+        "poison": 20
+      }
+    },
+    {
+      "name": "FOODFISH_COOKED",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 60 }
+    },
+    {
+      "name": "CACTUS",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": {
+        "value": 20,
+        "poison": 10,
+        "water": 10
+      }
+    },
+    {
+      "name": "COOKED_MEAT",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 60 }
+    },
+    {
+      "name": "CRAB_STICK",
+      "type": "food",
+      "meta_type": "nothing",
+      "data": { "value": 40 }
+    },
+    {
+      "name": "BANDAGE",
+      "type": "food",
+      "meta_type": "regenerable",
+      "data": { "value": 5 },
+      "give_score": 100000
+    },
+    {
+      "name": "ALOE_VERA",
+      "type": "food",
+      "meta_type": "regenerable",
+      "data": { "value": 1 }
+    },
+    {
+      "name": "WOOD",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "STONE",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "GOLD",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "DIAMOND",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "AMETHYST",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "REIDITE",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "EMERALD",
+      "type": "resource",
+      "meta_type": "nothing",
+      "data": {}
+    },
+    {
+      "name": "WOOD_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 1,
+        "damage": 1,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "STONE_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 1,
+        "damage": 2,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "GOLD_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 3,
+        "damage": 3,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "DIAMOND_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 8,
+        "damage": 4,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "AMETHYST_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 5,
+        "damage": 5,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "REIDITE_SHIELD",
+      "type": "equippable",
+      "meta_type": "shield",
+      "data": {
+        "protection": 6,
+        "damage": 6,
+        "protectionCold": 0,
+        "expandOffset": 10,
+        "expandRadius": 35,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "COAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 7,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "TURBAN1",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 7,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "TURBAN2",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 7,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "CHRISTMAS_HAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 7,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "ELF_HAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 8,
+        "protectionCold": 7,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "EARMUFFS",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 8,
+        "protectionCold": 4,
+        "animal_protection": 0
+      }
+    },
+    {
+      "name": "CAP_SCARF",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 1,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "FUR_HAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 2,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "WOOD_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 11,
+        "animal_protection": 10,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "DIVING_MASK",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 8,
+        "animal_protection": 12,
+        "protectionCold": 4,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "SUPER_DIVING_SUIT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 14,
+        "animal_protection": 7,
+        "protectionCold": 6
+      }
+    },
+    {
+      "name": "PIRATE_HAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 14,
+        "protectionCold": 7,
+        "animal_protection": 12,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "PEASANT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 4,
+        "animal_protection": 0,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "EXPLORER_HAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 3,
+        "animal_protection": 0,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "WINTER_PEASANT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 10,
+        "animal_protection": 16,
+        "protectionCold": 0,
+        "healAdjust": 80
+      }
+    },
+    {
+      "name": "HOOD",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 1,
+        "animal_protection": 0,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "WINTER_HOOD",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 999999,
+        "protectionCold": 1,
+        "animal_protection": 9999,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "EARMUFFS",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 3,
+        "animal_protection": 0,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "COAT",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 9,
+        "protectionCold": 6,
+        "animal_protection": 0,
+        "withoutCooldown": true
+      }
+    },
+    {
+      "name": "STONE_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 12,
+        "animal_protection": 12,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "GOLD_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 14,
+        "animal_protection": 14,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "DIAMOND_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 20  ,
+        "animal_protection": 25,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "AMETHYST_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 17,
+        "animal_protection": 16,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "REIDITE_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 10,
+        "animal_protection": 8,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "DRAGON_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 8,
+        "animal_protection": 3,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "CROWN_GREEN",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 4,
+        "animal_protection": 2,
+        "protectionCold": 0,
+        "healAdjust": 60
+      }
+    },
+    {
+      "name": "CROWN_ORANGE",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 4,
+        "animal_protection": 3,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "CROWN_BLUE",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 2,
+        "protectionCold": 0,
+        "animal_protection": 4,
+        "healAdjust": 50
+      }
+    },
+    {
+      "name": "LAVA_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 9,
+        "animal_protection": 6,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "CROWN_CRAB",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 11,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "PILOT_HELMET",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 0,
+        "protectionCold": 0,
+        "speed_boost": 1.7
+      }
+    },
+    {
+      "name": "BABY_DRAGON",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 0.55,
+        "slowSpeed": 1,
+        "maxSpeed": 32,
+        "startSpeed": 2,
+        "vehicule_type": "fly"
+      }
+    },
+    {
+      "name": "BABY_MAMMOTH",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 2,
+        "slowSpeed": 1,
+        "maxSpeed": 28,
+        "startSpeed": 2,
+        "vehicule_type": "ground"
+      }
+    },
+    {
+      "name": "MOUNT_BOAR",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 2,
+        "slowSpeed": 1,
+        "maxSpeed": 30,
+        "startSpeed": 2,
+        "vehicule_type": "ground"
+      }
+    },
+    {
+      "name": "BABY_LAVA",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 3,
+        "slowSpeed": 1,
+        "maxSpeed": 50,
+        "startSpeed": 100,
+        "vehicule_type": "fly"
+      }
+    },
+    {
+      "name": "HAWK",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 0.75,
+        "slowSpeed": 1,
+        "maxSpeed": 38,
+        "startSpeed": 4,
+        "vehicule_type": "fly"
+      }
+    },
+
+    {
+      "name": "PLANE",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 0.5,
+        "slowSpeed": 1,
+        "maxSpeed": 36,
+        "startSpeed": 2,
+        "vehicule_type": "fly"
+      }
+    },
+
+    {
+      "name": "NIMBUS",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 1,
+        "slowSpeed": 1,
+        "maxSpeed": 33,
+        "startSpeed": 2,
+        "vehicule_type": "fly"
+      }
+    },
+    {
+      "name": "BOAT",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 50,
+        "slowSpeed": 50,
+        "maxSpeed": 50,
+        "startSpeed": 50,
+        "vehicule_type": "ground"
+      }
+    },
+    {
+      "name": "CRAB_BOSS",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 2,
+        "slowSpeed": 1,
+        "maxSpeed": 34,
+        "startSpeed": 2,
+        "vehicule_type": "ground"
+      }
+    },  
+    {
+      "name": "SLED",
+      "type": "equippable",
+      "meta_type": "riding",
+      "data": {
+        "raiseSpeed": 1,
+        "slowSpeed": 1,
+        "maxSpeed": 28,
+        "startSpeed": 3,
+        "vehicule_type": "ground"
+      }
+    },
+    {
+      "name": "LAVA_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 24,
+        "building_damage": 8
+      }
+    },
+    {
+      "name": "WOOD_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 150,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 40000,
+        "building_damage": 4
+      }
+    },
+    {
+      "name": "GOLD_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 28,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "CRAB_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 30,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "DIAMOND_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 40,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "AMETHYST_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 30,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "REIDITE_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 28,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "DRAGON_SPEAR",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 82,
+        "expandRadius": 71,
+        "damage": 22,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "WOOD_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["WOOD_ARROW", 1]
+      }
+    },
+    {
+      "name": "STONE_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["STONE_ARROW", 1]
+      }
+    },
+    {
+      "name": "GOLD_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["GOLD_ARROW", 1]
+      }
+    },
+    {
+      "name": "DIAMOND_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["DIAMOND_ARROW", 1]
+      }
+    },
+    {
+      "name": "REIDITE_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["REIDITE_ARROW", 1]
+      }
+    },
+    {
+      "name": "DRAGON_BOW",
+      "type": "equippable",
+      "meta_type": "bow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 0,
+        "building_damage": 0,
+        "bulletData": ["DRAGON_ARROW", 1]
+      }
+    },
+    {
+      "name": "WOOD_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 20,
+        "info": 2226,
+        "max_speed": 60,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "STONE_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 400,
+        "info": 2739,
+        "max_speed": 200,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "GOLD_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 15,
+        "info": 2900,
+        "max_speed": 60,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "DIAMOND_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 25,
+        "info": 2453,
+        "max_speed": 80,
+        "building_damage": 10
+      }
+    },
+    {
+      "name": "AMETHYST_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 1,
+        "info": 2694,
+        "max_speed": 30,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "REIDITE_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 45,
+        "info": 2567,
+        "max_speed": 80,
+        "building_damage": 15
+      }
+    },
+    {
+      "name": "DRAGON_ARROW",
+      "type": "resource",
+      "meta_type": "arrow",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 60,
+        "info": 2840,
+        "max_speed": 80,
+        "building_damage":20
+      }
+    },
+    {
+      "name": "SWORD_WOOD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 35,
+        "expandRadius": 52,
+        "damage": 34,
+        "building_damage": 4
+      }
+    },
+    {
+      "name": "SWORD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 36,
+        "building_damage": 4
+      }
+    },
+    {
+      "name": "SWORD_GOLD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 38,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "PIRATE_SWORD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 42.5,
+        "expandRadius": 50,
+        "damage": 36,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "SWORD_DIAMOND",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 47,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "SWORD_AMETHYST",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 42,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "REIDITE_SWORD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 33,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "DRAGON_SWORD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 30,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "LAVA_SWORD",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 32,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "BOOK",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 0,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "PITCHFORK",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 85,
+        "expandRadius": 95,
+        "damage": 0,
+        "building_damage": 1000
+      }
+    },
+    {
+      "name": "HAND",
+      "type": "equippable",
+      "meta_type": "hand",
+      "data": {
+        "expandOffset": 15,
+        "expandRadius": 25,
+        "damage": 5,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "PITCHFORK2",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 37.5,
+        "expandRadius": 50,
+        "damage": 36,
+        "building_damage": 5
+      }
+    },
+    {
+      "name": "MACHETE",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 5,
+        "building_damage": 2
+      }
+    },
+    {
+      "name": "WATERING_CAN_FULL",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 55,
+        "damage": 0,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "PICK_WOOD",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 1,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "PICK",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 2,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "PICK_GOLD",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 3,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "PICK_DIAMOND",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 4,
+        "building_damage": 1
+      }
+    },
+    {
+      "name": "PICK_AMETHYST",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 5,
+        "building_damage": 2
+      }
+    },
+    {
+      "name": "PICK_REIDITE",
+      "type": "equippable",
+      "meta_type": "pickaxe",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 6,
+        "building_damage": 3
+      }
+    },
+    {
+      "name": "SPANNER",
+      "type": "equippable",
+      "meta_type": "wrenchable",
+      "data": {
+        "expandOffset": 40,
+        "expandRadius": 40,
+        "damage": 2,
+        "building_damage": 75
+      }
+    },
+    {
+      "name": "SADDLE",
+      "type": "equippable",
+      "meta_type": "wrenchable",
+      "data": {
+        "expandOffset": 40,
+        "expandRadius": 40,
+        "damage": 0,
+        "building_damage": 0
+      }
+    },
+    {
+      "name": "HAMMER",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 0,
+        "building_damage": 200000000000000000000
+      }
+    },
+    {
+      "name": "HAMMER_GOLD",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 1,
+        "building_damage": 30
+      }
+    },
+    {
+      "name": "HAMMER_DIAMOND",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 2,
+        "building_damage": 40
+      }
+    },
+    {
+      "name": "HAMMER_AMETHYST",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 3,
+        "building_damage": 50
+      }
+    },
+    {
+      "name": "HAMMER_REIDITE",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 4,
+        "building_damage": 60
+      }
+    },
+    {
+      "name": "SUPER_HAMMER",
+      "type": "equippable",
+      "meta_type": "hammer",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 9,
+        "building_damage": 100
+      }
+    },
+    {
+      "name": "BED",
+      "type": "building",
+      "meta_type": "bed",
+      "data": {
+        "damageProtection": 9,
+        "health": 400,
+        "radius": 70,
+        "placeRadius": 45,
+        "subData": "obstacle",
+        "isGridOnly": true
+      }
+    },
+    {
+      "name": "WORKBENCH",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 1,
+        "health": 120,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "RESURRECTION",
+      "type": "building",
+      "meta_type": "nothing",
+      "data": {
+        "damageProtection": 6,
+        "health": 300,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 1,
+        "health": 200,
+        "radius": 40,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "WOOD_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 1,
+        "collideDamage": 5,
+        "hitDamage": 100,
+        "health": 20000,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "STONE_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 6,
+        "collideDamage": 10,
+        "hitDamage": 2,
+        "health": 200,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "GOLD_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 6,
+        "collideDamage": 15,
+        "hitDamage": 2,
+        "health": 300,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "DIAMOND_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 6,
+        "collideDamage": 25,
+        "hitDamage": 3,
+        "health": 500,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "AMETHYST_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 6,
+        "collideDamage": 30,
+        "hitDamage": 3,
+        "health": 850,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "REIDITE_DOOR_SPIKE",
+      "type": "building",
+      "meta_type": "spiked_door",
+      "data": {
+        "damageProtection": 6,
+        "health": 2200,
+        "collideDamage": 35,
+        "hitDamage": 4,
+        "radius": 40,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "WOOD_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 1,
+        "health": 640,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "STONE_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 6,
+        "health": 660,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "GOLD_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 6,
+        "health": 1000,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "DIAMOND_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 6,
+        "health": 1224,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "AMETHYST_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 6,
+        "health": 1672,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "REIDITE_DOOR",
+      "type": "building",
+      "meta_type": "door",
+      "data": {
+        "damageProtection": 6,
+        "health": 2000,
+        "radius": 45,
+        "placeRadius": 37,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "EMERALD_MACHINE",
+      "type": "building",
+      "meta_type": "scoreable",
+      "data": {
+        "scoreGives": 50,
+        "damageProtection": 6,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 55,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "STONE_WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 6,
+        "health": 160,
+        "radius": 45,
+        "placeRadius": 40,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "GOLD_WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 6,
+        "health": 200,
+        "radius": 45,
+        "placeRadius": 40,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "DIAMOND_WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 6,
+        "health": 300,
+        "radius": 45,
+        "placeRadius": 40,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "AMETHYST_WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 6,
+        "health": 520,
+        "radius": 45,
+        "placeRadius": 40,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "REIDITE_WALL",
+      "type": "building",
+      "meta_type": "wall",
+      "data": {
+        "damageProtection": 6,
+        "health": 1000,
+        "radius": 45,
+        "placeRadius": 40,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 2,
+        "collideDamage": 10,
+        "hitDamage": 100,
+        "health": 20000,
+        "radius": 45,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "STONE_SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 5,
+        "collideDamage": 40,
+        "hitDamage": 20,
+        "health": 10000,
+        "radius": 36,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "GOLD_SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 5,
+        "collideDamage": 25,
+        "hitDamage": 3,
+        "health": 100,
+        "radius": 36,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "DIAMOND_SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 5,
+        "collideDamage": 30,
+        "hitDamage": 4,
+        "health": 110,
+        "radius": 36,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "AMETHYST_SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 5,
+        "collideDamage": 40,
+        "hitDamage": 4,
+        "health": 125,
+        "radius": 36,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "REIDITE_SPIKE",
+      "type": "building",
+      "meta_type": "SPIKED_WALL",
+      "data": {
+        "damageProtection": 10,
+        "collideDamage": 50,
+        "hitDamage": 5,
+        "health": 150,
+        "radius": 36,
+        "placeRadius": 37,
+        "collideResolveRadius": 50,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "TOTEM",
+      "type": "building",
+      "meta_type": "TOTEM",
+      "data": {
+        "damageProtection": 3,
+        "health": 200,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "ROOF",
+      "type": "building",
+      "meta_type": "nothing",
+      "data": {
+        "damageProtection": 5,
+        "health": 500,
+        "radius": 50,
+        "placeRadius": 40,
+        "isGridOnly": true,
+        "subData": "obstacle",
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "WOOD_TOWER",
+      "type": "building",
+      "meta_type": "nothing",
+      "data": {
+        "damageProtection": 5,
+        "health": 500,
+        "radius": 50,
+        "placeRadius": 40,
+        "isGridOnly": true,
+        "subData": "obstacle",
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "PLOT",
+      "type": "building",
+      "meta_type": "plot",
+      "data": {
+        "damageProtection": 6,
+        "health": 300,
+        "radius": 50,
+        "placeRadius": 40,
+        "subData": "obstacle",
+        "isGridOnly": true
+      }
+    },
+    {
+      "name": "BRIDGE",
+      "type": "building",
+      "meta_type": "nothing",
+      "data": {
+        "damageProtection": 5,
+        "health": 500,
+        "radius": 50,
+        "placeRadius": 40,
+        "subData": "obstacle",
+        "isGridOnly": true,
+        "healthSendable": true
+      }
+    },
+    {
+      "name": "CHEST",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 6,
+        "health": 800,
+        "radius": 20,
+        "placeRadius": 30
+      }
+    },
+    {
+      "name": "FIRE",
+      "type": "building",
+      "meta_type": "fire",
+      "data": {
+        "damageProtection": 2,
+        "health": 150,
+        "radius": 20,
+        "subData": "obstacle",
+        "placeRadius": 30,
+        "collideResolveRadius": 30,
+        "collideDamage": 40,
+        "aliveTime": 120000
+      }
+    },
+    {
+      "name": "BIG_FIRE",
+      "type": "building",
+      "meta_type": "fire",
+      "data": {
+        "damageProtection": 2,
+        "health": 150,
+        "radius": 35,
+        "subData": "obstacle",
+        "placeRadius": 30,
+        "collideResolveRadius": 30,
+        "collideDamage": 40,
+        "aliveTime": 240000
+      }
+    },
+    {
+      "name": "FURNACE",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 4,
+        "health": 1000,
+        "placeRadius": 35,
+        "radius": 45,
+        "collideResolveRadius": 30,
+        "collideDamage": 40
+      }
+    },
+    {
+      "name": "SHOVEL",
+      "type": "equippable",
+      "meta_type": "shovel",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 1,
+        "building_damage": 0,
+        "mine_increase": 1
+      }
+    },
+    {
+      "name": "SHOVEL_GOLD",
+      "type": "equippable",
+      "meta_type": "shovel",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 2,
+        "building_damage": 0,
+        "mine_increase": 2
+      }
+    },
+    {
+      "name": "SHOVEL_DIAMOND",
+      "type": "equippable",
+      "meta_type": "shovel",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 3,
+        "building_damage": 0,
+        "mine_increase": 3
+      }
+    },
+    {
+      "name": "SHOVEL_AMETHYST",
+      "type": "equippable",
+      "meta_type": "sword",
+      "data": {
+        "expandOffset": 45,
+        "expandRadius": 45,
+        "damage": 28,
+        "building_damage": 10
+      }
+    },
+    {
+      "name": "WINDMILL",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 1,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 60
+      }
+    },
+    {
+      "name": "BREAD_OVEN",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 1,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 50
+      }
+    },
+    {
+      "name": "EXTRACTOR_MACHINE_STONE",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 1,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "EXTRACTOR_MACHINE_GOLD",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 3,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "EXTRACTOR_MACHINE_DIAMOND",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 3,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "EXTRACTOR_MACHINE_AMETHYST",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 3,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "EXTRACTOR_MACHINE_REIDITE",
+      "type": "building",
+      "meta_type": "storage",
+      "data": {
+        "damageProtection": 3,
+        "health": 2000,
+        "radius": 40,
+        "placeRadius": 40
+      }
+    },
+    {
+      "name": "DIAMOND_PROTECTION",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 24,
+        "animal_protection": 22,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "AMETHYST_PROTECTION",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 26,
+        "animal_protection": 19,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "REIDITE_PROTECTION",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 28,
+        "animal_protection": 19,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "WITCH",
+      "type": "equippable",
+      "meta_type": "hat",
+      "data": {
+        "protection": 19,
+        "animal_protection": 1,
+        "protectionCold": 0
+      }
+    },
+    {
+      "name": "GARLAND",
+      "type": "building",
+      "meta_type": "nothing",
+      "data": {
+        "damageProtection": 0,
+        "health": 9999,
+        "radius": 0,
+        "placeRadius": 0,
+        "isGridOnly": false,
+        "subData": "obstacle",
+        "healthSendable": true
+      }
+    }
+  ],
+  "world": {
+    "Width": 10000,
+    "Height": 10000,
+    "resources": {
+      "resource_fill_min": 30,
+      "resource_fill_max": 5000000,
+      "resource_fill_online_formula": [10, 10]
+    },
+
+    "hi": 0,
+    "islands": [
+      [
+        [0, 0],
+        [10000, 10000]
+      ]
+    ],
+    "desert": [
+      [
+        [700, 3700],
+        [7500, 9300]
+      ]
+    ],
+    "lava": [
+      [
+        [5200, 8850],
+        [2700, 3900]
+      ],
+      [
+        [2200, 2650],
+        [900, 1500]
+      ],
+      [
+        [6200, 6700],
+        [1250, 1800]
+      ]
+    ],
+    "map":[[0,"FOREST",1,1,13,11,0],[0,"FOREST",1,1,13,11,0],[0,"FOREST",16,1,20,10,0],[0,"FOREST",62,43,10,8,0],[0,"DRAGON",69,73,22,24,0],[0,"WINTER",1,41,16,24,0],[0,"DRAGON",89,26,10,11,0],[0,"DESERT",4,73,35,22,1],[0,"WINTER",45,63,16,22,0],[0,"LAVA",54,24,36,18,0],[0,"FOREST",1,11,55,37,0],[1,"cs",2,9,3,1],[1,"cs",2,9,8,1],[1,"cs",2,6,8,1],[1,"cs",2,5,8,1],[1,"cs",3,2,8,1],[1,"cs",0,0,8,1],[1,"cs",0,9,0,1],[1,"cs",0,4,8,1],[1,"cs",2,8,8,1],[1,"cs",2,10,9,1],[1,"cs",2,11,8,1],[1,"cs",2,1,9,1],[1,"cs",2,11,11,1],[1,"cs",2,12,6,1],[1,"cs",2,12,1,1],[1,"cs",2,10,5,1],[1,"cs",2,11,4,1],[1,"cs",2,5,9,1],[1,"",0,7,10,1],[1,"cs",0,3,10,1],[1,"cs",0,11,1,1],[1,"cs",1,12,10,1],[1,"cs",2,10,7,1],[1,"cs",2,10,6,1],[1,"cs",2,10,4,1],[1,"cs",2,12,3,1],[1,"cs",1,11,3,1],[1,"cs",2,10,2,1],[1,"cs",2,12,8,1],[1,"cs",1,10,8,1],[1,"cs",3,11,10,1],[1,"cs",3,7,9,1],[1,"cs",3,8,10,1],[1,"cs",3,6,11,1],[1,"cs",3,4,10,1],[1,"cs",3,3,9,1],[1,"cs",3,2,11,1],[1,"cs",1,1,11,1],[1,"cs",2,0,10,1],[1,"cs",2,1,10,1],[1,"cs",2,2,9,1],[1,"cs",2,5,10,1],[1,"cs",1,5,11,1],[1,"cs",1,8,11,1],[1,"cs",3,8,9,1],[1,"cs",3,11,9,1],[1,"cs",3,10,10,1],[1,"cs",3,9,11,1],[1,"cs",3,11,5,1],[1,"cs",2,8,3,1],[1,"cs",2,6,2,1],[1,"cs",2,0,4,1],[1,"cs",2,1,2,1],[1,"cs",2,1,0,1],[1,"cs",2,1,1,1],[1,"cs",2,2,2,1],[1,"cs",2,3,1,1],[1,"cs",2,4,1,1],[1,"cs",2,2,1,1],[1,"cs",2,5,0,1],[1,"cs",2,7,1,1],[1,"cs",2,7,0,1],[1,"cs",2,11,0,1],[1,"cs",2,10,0,1],[1,"cs",2,0,6,1],[1,"cs",2,2,6,1],[1,"cs",2,2,4,1],[1,"cs",2,1,4,1],[1,"cs",2,1,3,1],[1,"cs",1,2,7,1],[1,"cs",1,8,2,1],[1,"cs",1,6,1,1],[1,"cs",1,0,1,1],[1,"cs",0,3,0,1],[1,"cs",0,0,7,1],[1,"cs",3,5,1,1],[1,"cs",3,8,1,1],[1,"cs",3,1,6,1],[1,"cs",3,0,3,1],[1,"cs",3,7,3,1],[1,"cs",2,7,4,1],[1,"cs",2,6,4,1],[1,"cs",1,7,8,1],[1,"cs",1,4,9,1],[1,"cs",1,0,0,1],[1,"cs",2,8,0,1],[1,"cs",2,4,0,1],[1,"cs",2,8,4,1],[1,"cs",1,6,3,1],[1,"cs",1,0,5,1],[1,"cs",1,2,3,1],[1,"cs",2,12,2,1],[1,"cs",2,12,7,1],[1,"cs",2,12,5,1],[1,"cs",0,11,7,1],[1,"cs",2,10,1,1],[1,"cs",2,10,3,1],[1,"cs",2,9,10,1],[1,"cs",0,10,11,1],[1,"cs",1,3,11,1],[1,"cs",2,3,8,1],[1,"cs",2,2,10,1],[1,"cs",2,6,10,1],[1,"cs",2,1,8,1],[1,"cs",0,2,5,1],[1,"cs",2,61,46,1],[1,"cs",2,59,47,1],[1,"cs",2,61,47,1],[1,"cs",2,63,47,1],[1,"cs",2,64,47,1],[1,"cs",2,69,47,1],[1,"cs",2,69,46,1],[1,"cs",2,70,46,1],[1,"cs",2,70,45,1],[1,"cs",2,62,46,1],[1,"cs",2,66,45,1],[1,"cs",2,59,44,1],[1,"cs",2,74,42,1],[1,"cs",2,74,46,1],[1,"cs",2,74,47,1],[1,"cs",2,74,48,1],[1,"cs",2,71,48,1],[1,"cs",2,71,46,1],[1,"cs",2,71,45,1],[1,"cs",2,70,48,1],[1,"cs",2,69,48,1],[1,"cs",2,67,48,1],[1,"cs",2,62,48,1],[1,"cs",2,61,48,1],[1,"cs",2,53,48,1],[1,"cs",0,3,2,1],[1,"cs",2,5,4,1],[1,"cs",2,4,4,1],[1,"cs",2,3,4,1],[1,"cs",2,3,3,1],[1,"cs",2,4,3,1],[1,"cs",2,5,3,1],[1,"cs",2,5,2,1],[1,"cs",2,4,2,1],[1,"cs",1,9,4,1],[1,"cs",2,59,48,1],[1,"cs",2,63,48,1],[1,"cs",2,64,48,1],[1,"cs",2,55,17,1],[1,"cs",2,53,17,1],[1,"cs",2,43,15,1],[1,"cs",2,41,15,1],[1,"cs",2,58,44,1],[1,"cs",2,58,45,1],[1,"cs",2,58,47,1],[1,"cs",2,57,46,1],[1,"cs",2,58,48,1],[1,"cs",2,12,11,1],[1,"cs",2,12,9,1],[1,"cs",2,9,9,1],[1,"cs",2,7,11,1],[1,"cs",2,6,9,1],[1,"cs",2,4,11,1],[1,"cs",2,0,11,1],[1,"cs",2,0,9,1],[1,"cs",2,1,7,1],[1,"cs",2,1,5,1],[1,"cs",2,0,2,1],[1,"cs",2,2,0,1],[1,"cs",2,6,0,1],[1,"cs",2,7,2,1],[1,"cs",2,9,1,1],[1,"cs",2,9,2,1],[1,"cs",2,12,4,1],[1,"cs",2,11,6,1],[1,"cs",2,11,2,1],[1,"cs",2,12,0,1],[1,"cs",0,12,45,1],[1,"cs",2,73,46,1],[1,"cs",2,72,46,1],[1,"cs",2,72,45,1],[1,"cs",2,73,45,1],[1,"cs",2,72,47,1],[1,"cs",2,72,48,1],[1,"cs",3,55,18,1],[1,"cs",3,53,18,1],[1,"cs",2,53,44,1],[1,"cs",2,54,45,1],[1,"cs",2,54,44,1],[1,"cs",2,55,44,1],[1,"cs",2,56,44,1],[1,"cs",2,57,44,1],[1,"cs",2,56,45,1],[1,"cs",2,64,46,1],[1,"cs",2,63,46,1],[1,"cs",0,60,24,1],[1,"cs",2,52,20,1],[1,"cs",2,55,20,1],[1,"cs",2,55,19,1],[1,"cs",2,54,19,1],[1,"cs",2,54,20,1],[1,"cs",2,53,19,1],[1,"cs",0,54,41,1],[1,"cs",0,58,42,1],[1,"cs",0,52,39,1],[1,"cs",2,77,38,1],[1,"cs",2,77,40,1],[1,"cs",2,77,41,1],[1,"cs",2,77,42,1],[1,"cs",2,77,43,1],[1,"cs",2,78,43,1],[1,"cs",2,78,44,1],[1,"cs",2,77,44,1],[1,"cs",2,77,45,1],[1,"cs",2,77,46,1],[1,"cs",2,77,48,1],[1,"cs",2,76,48,1],[1,"cs",2,75,47,1],[1,"cs",2,75,45,1],[1,"cs",2,75,46,1],[1,"cs",2,78,46,1],[1,"cs",2,78,45,1],[1,"cs",2,78,47,1],[1,"cs",2,76,46,1],[1,"cs",2,76,47,1],[1,"cs",2,76,45,1],[1,"cs",2,76,42,1],[1,"cs",2,75,42,1],[1,"cs",2,78,42,1],[1,"cs",2,78,41,1],[1,"cs",2,78,39,1],[1,"cs",2,78,40,1],[1,"cs",2,78,38,1],[1,"cs",2,13,44,1],[1,"cs",2,12,44,1],[1,"cs",2,9,39,1],[1,"cs",2,9,40,1],[1,"cs",2,9,42,1],[1,"cs",2,9,43,1],[1,"cs",2,9,44,1],[1,"cs",2,31,11,1],[1,"cs",2,30,11,1],[1,"cs",2,20,10,1],[1,"cs",2,19,10,1],[1,"cs",2,20,11,1],[1,"cs",2,32,11,1],[1,"cs",2,9,19,1],[1,"cs",2,9,20,1],[1,"cs",2,9,21,1],[1,"cs",2,9,22,1],[1,"cs",2,9,23,1],[1,"cs",2,9,24,1],[1,"cs",2,8,24,1],[1,"cs",2,6,24,1],[1,"cs",2,5,24,1],[1,"cs",2,4,24,1],[1,"cs",2,2,24,1],[1,"cs",2,1,24,1],[1,"cs",2,0,24,1],[1,"cs",2,8,39,1],[1,"cs",2,7,39,1],[1,"cs",2,5,39,1],[1,"cs",2,4,39,1],[1,"cs",2,3,39,1],[1,"cs",2,2,39,1],[1,"cs",2,1,39,1],[1,"cs",2,9,45,1],[1,"cs",2,9,46,1],[1,"cs",2,9,47,1],[1,"cs",2,12,47,1],[1,"cs",2,12,46,1],[1,"cs",2,12,48,1],[1,"cs",2,53,38,1],[1,"cs",2,55,38,1],[1,"cs",2,57,38,1],[1,"cs",2,58,39,1],[1,"cs",2,58,40,1],[1,"cs",2,58,41,1],[1,"cs",2,59,41,1],[1,"cs",2,60,41,1],[1,"cs",2,60,23,1],[1,"cs",2,59,23,1],[1,"cs",2,52,24,1],[1,"cs",2,52,26,1],[1,"cs",2,52,27,1],[1,"cs",2,62,42,1],[1,"cs",2,59,42,1],[1,"cs",2,56,43,1],[1,"cs",2,57,43,1],[1,"cs",2,56,42,1],[1,"cs",2,56,41,1],[1,"cs",2,56,40,1],[1,"cs",2,55,40,1],[1,"cs",2,57,41,1],[1,"cs",2,57,40,1],[1,"cs",2,56,39,1],[1,"cs",2,55,39,1],[1,"cs",2,54,40,1],[1,"cs",2,54,39,1],[1,"cs",2,53,39,1],[1,"cs",2,53,40,1],[1,"cs",2,52,41,1],[1,"cs",2,53,41,1],[1,"cs",2,53,42,1],[1,"cs",2,54,42,1],[1,"cs",2,52,43,1],[1,"cs",2,55,42,1],[1,"cs",2,55,43,1],[1,"cs",1,57,39,1],[1,"cs",2,58,24,1],[1,"cs",2,59,24,1],[1,"cs",2,60,25,1],[1,"cs",2,59,25,1],[1,"cs",2,58,25,1],[1,"cs",1,55,41,1],[1,"cs",1,57,42,1],[1,"cs",1,60,42,1],[1,"cs",0,58,23,1],[1,"cs",0,53,20,1],[1,"cs",0,54,38,1],[1,"cs",1,52,18,1],[1,"cs",2,55,16,1],[1,"cs",2,53,16,1],[1,"cs",2,52,16,1],[1,"cs",2,48,15,1],[1,"cs",2,52,15,1],[1,"cs",2,51,15,1],[1,"cs",2,50,15,1],[1,"cs",2,53,15,1],[1,"cs",2,55,15,1],[1,"cs",1,49,15,1],[1,"cs",2,0,40,1],[1,"cs",2,2,40,1],[1,"cs",2,3,40,1],[1,"cs",2,4,40,1],[1,"cs",2,6,40,1],[1,"cs",2,7,40,1],[1,"cs",2,8,40,1],[1,"cs",2,8,41,1],[1,"cs",2,8,42,1],[1,"cs",2,8,43,1],[1,"cs",2,8,44,1],[1,"cs",2,8,45,1],[1,"cs",2,8,46,1],[1,"cs",2,8,47,1],[1,"cs",2,19,52,1],[1,"cs",2,20,52,1],[1,"cs",0,18,52,1],[1,"cs",2,13,48,1],[1,"cs",2,13,47,1],[1,"cs",2,13,45,1],[1,"cs",1,13,46,1],[1,"cs",0,19,11,1],[1,"cs",0,3,24,1],[1,"cs",0,6,39,1],[1,"cs",0,1,40,1],[1,"cs",0,9,41,1],[1,"cs",1,5,41,1],[1,"cs",1,5,40,1],[1,"cs",1,2,23,1],[1,"cs",1,6,23,1],[1,"cs",1,40,15,1],[1,"cs",2,7,41,1],[1,"cs",2,6,41,1],[1,"cs",2,4,41,1],[1,"cs",2,3,41,1],[1,"cs",2,2,41,1],[1,"cs",2,1,41,1],[1,"cs",2,0,41,1],[1,"cs",2,0,39,1],[1,"cs",2,0,23,1],[1,"cs",2,1,23,1],[1,"cs",2,3,23,1],[1,"cs",2,4,23,1],[1,"cs",2,5,23,1],[1,"cs",2,7,23,1],[1,"cs",2,7,24,1],[1,"cs",2,8,23,1],[1,"cs",2,9,18,1],[1,"cs",2,19,9,1],[1,"cs",2,20,9,1],[1,"cs",2,33,11,1],[1,"cs",2,37,49,1],[1,"cs",2,37,50,1],[1,"cs",1,54,51,1],[1,"cs",1,35,52,1],[1,"cs",0,55,45,1],[1,"cs",1,70,47,1],[1,"cs",1,67,45,1],[1,"cs",1,62,47,1],[1,"cs",0,59,46,1],[1,"cs",0,45,51,1],[1,"cs",2,53,43,1],[1,"cs",2,36,52,1],[1,"cs",2,38,52,1],[1,"cs",2,45,52,1],[1,"cs",2,46,52,1],[1,"cs",2,53,52,1],[1,"cs",2,54,52,1],[1,"cs",2,55,52,1],[1,"cs",2,56,52,1],[1,"cs",2,57,52,1],[1,"cs",2,56,51,1],[1,"cs",2,55,51,1],[1,"cs",2,54,49,1],[1,"cs",2,53,49,1],[1,"cs",2,54,50,1],[1,"cs",2,37,51,1],[1,"cs",2,38,51,1],[1,"cs",2,46,51,1],[1,"cs",2,52,51,1],[1,"cs",2,53,51,1],[1,"cs",2,55,50,1],[1,"cs",1,57,45,1],[1,"cs",2,58,49,1],[1,"cs",2,59,49,1],[1,"cs",2,59,50,1],[1,"cs",2,69,50,1],[1,"cs",2,68,50,1],[1,"cs",2,67,50,1],[1,"cs",2,68,49,1],[1,"cs",2,67,49,1],[1,"cs",2,64,49,1],[1,"cs",2,62,49,1],[1,"cs",2,61,49,1],[1,"cs",2,61,50,1],[1,"cs",2,62,50,1],[1,"cs",2,63,50,1],[1,"cs",2,64,50,1],[1,"cs",2,67,52,1],[1,"cs",2,64,52,1],[1,"cs",1,63,49,1],[1,"cs",1,62,51,1],[1,"cs",1,69,52,1],[1,"cs",1,73,48,1],[1,"cs",1,78,48,1],[1,"cs",1,74,45,1],[1,"cs",0,68,48,1],[1,"cs",0,73,47,1],[1,"cs",0,77,47,1],[1,"cs",0,75,48,1],[1,"cs",0,71,47,1],[1,"cs",0,68,52,1],[1,"cs",2,68,51,1],[1,"cs",2,69,49,1],[1,"cs",3,8,17,1],[1,"cs",3,8,16,1],[1,"cs",3,8,15,1],[1,"cs",3,8,14,1],[1,"cs",3,8,13,1],[1,"cs",3,8,12,1],[1,"cs",2,9,13,1],[1,"cs",2,9,14,1],[1,"cs",1,9,12,1],[1,"cs",1,9,17,1],[1,"cs",0,9,15,1],[1,"cs",2,78,49,1],[1,"cs",2,78,50,1],[1,"cs",2,78,51,1],[1,"cs",2,78,52,1],[1,"cs",2,77,52,1],[1,"cs",2,76,52,1],[1,"cs",2,75,52,1],[1,"cs",2,74,52,1],[1,"cs",2,73,52,1],[1,"cs",2,72,52,1],[1,"cs",2,71,52,1],[1,"cs",2,70,52,1],[1,"cs",2,70,51,1],[1,"cs",2,71,51,1],[1,"cs",2,72,51,1],[1,"cs",2,73,51,1],[1,"cs",2,74,51,1],[1,"cs",2,75,51,1],[1,"cs",2,76,50,1],[1,"cs",2,77,50,1],[1,"cs",2,77,51,1],[1,"cs",2,75,50,1],[1,"cs",2,74,49,1],[1,"cs",2,73,49,1],[1,"cs",2,72,49,1],[1,"cs",2,71,49,1],[1,"cs",2,70,50,1],[1,"cs",2,72,50,1],[1,"cs",2,73,50,1],[1,"cs",2,74,50,1],[1,"cs",2,76,49,1],[1,"cs",2,77,49,1],[1,"cs",2,75,49,1],[1,"cs",2,70,49,1],[1,"cs",1,32,5,1],[1,"cs",1,33,2,1],[1,"cs",1,36,1,1],[1,"cs",0,32,0,1],[1,"cs",2,33,5,1],[1,"cs",2,33,4,1],[1,"cs",2,33,3,1],[1,"cs",2,32,3,1],[1,"cs",2,32,4,1],[1,"cs",2,32,2,1],[1,"cs",2,32,1,1],[1,"cs",2,33,1,1],[1,"cs",2,33,0,1],[1,"cs",2,34,0,1],[1,"cs",2,35,0,1],[1,"cs",2,36,0,1],[1,"cs",2,37,0,1],[1,"cs",1,37,3,1],[1,"cs",0,35,3,1],[1,"cs",2,36,3,1],[1,"cs",2,34,3,1],[1,"cs",2,34,2,1],[1,"cs",2,34,1,1],[1,"cs",2,35,1,1],[1,"cs",2,35,2,1],[1,"cs",2,36,2,1],[1,"cs",2,37,2,1],[1,"cs",2,37,1,1],[1,"cs",2,13,11,1],[1,"cs",2,15,11,1],[1,"cs",2,16,11,1],[1,"cs",2,18,11,1],[1,"cs",2,17,10,1],[1,"cs",2,14,10,1],[1,"cs",2,13,9,1],[1,"cs",2,15,9,1],[1,"cs",2,16,8,1],[1,"cs",2,16,9,1],[1,"cs",1,30,1,1],[1,"cs",1,25,0,1],[1,"cs",1,19,1,1],[1,"cs",1,15,0,1],[1,"cs",1,13,4,1],[1,"cs",0,14,6,1],[1,"cs",0,22,0,1],[1,"cs",0,18,4,1],[1,"cs",0,14,11,1],[1,"cs",0,17,9,1],[1,"cs",1,15,10,1],[1,"cs",1,17,6,1],[1,"cs",1,28,0,1],[1,"cs",2,19,8,1],[1,"cs",2,19,7,1],[1,"cs",2,19,6,1],[1,"cs",2,19,5,1],[1,"cs",2,19,4,1],[1,"cs",3,27,1,1],[1,"cs",3,28,1,1],[1,"cs",3,29,0,1],[1,"cs",3,30,0,1],[1,"cs",3,31,0,1],[1,"cs",3,31,1,1],[1,"cs",3,30,6,1],[1,"cs",2,27,0,1],[1,"cs",2,26,0,1],[1,"cs",2,24,0,1],[1,"cs",2,23,0,1],[1,"cs",2,21,0,1],[1,"cs",2,20,0,1],[1,"cs",2,19,0,1],[1,"cs",2,18,0,1],[1,"cs",2,17,0,1],[1,"cs",2,16,0,1],[1,"cs",2,14,0,1],[1,"cs",2,13,0,1],[1,"cs",2,13,1,1],[1,"cs",2,13,2,1],[1,"cs",2,13,3,1],[1,"cs",2,13,5,1],[1,"cs",2,13,6,1],[1,"cs",2,13,7,1],[1,"cs",2,13,8,1],[1,"cs",2,13,10,1],[1,"cs",2,16,10,1],[1,"cs",2,17,11,1],[1,"cs",2,18,10,1],[1,"cs",2,18,9,1],[1,"cs",2,18,8,1],[1,"cs",2,18,7,1],[1,"cs",2,18,6,1],[1,"cs",2,18,5,1],[1,"cs",2,17,4,1],[1,"cs",2,17,5,1],[1,"cs",2,17,7,1],[1,"cs",2,17,8,1],[1,"cs",2,16,7,1],[1,"cs",2,16,6,1],[1,"cs",2,16,5,1],[1,"cs",2,15,5,1],[1,"cs",2,16,4,1],[1,"cs",2,16,3,1],[1,"cs",2,16,2,1],[1,"cs",2,15,3,1],[1,"cs",2,15,4,1],[1,"cs",2,15,6,1],[1,"cs",2,15,7,1],[1,"cs",2,15,8,1],[1,"cs",2,14,9,1],[1,"cs",2,14,8,1],[1,"cs",2,14,7,1],[1,"cs",2,14,5,1],[1,"cs",2,14,4,1],[1,"cs",2,14,3,1],[1,"cs",2,14,2,1],[1,"cs",2,15,2,1],[1,"cs",2,15,1,1],[1,"cs",2,14,1,1],[1,"cs",2,16,1,1],[1,"cs",2,17,1,1],[1,"cs",2,17,2,1],[1,"cs",2,17,3,1],[1,"cs",2,18,3,1],[1,"cs",2,19,3,1],[1,"cs",2,19,2,1],[1,"cs",2,18,2,1],[1,"cs",2,18,1,1],[1,"cs",2,29,1,1],[1,"cs",0,20,7,1],[1,"cs",1,20,4,1],[1,"cs",2,20,3,1],[1,"cs",2,20,2,1],[1,"cs",2,20,1,1],[1,"cs",2,20,5,1],[1,"cs",2,20,8,1],[1,"cs",1,41,14,1],[1,"cs",1,40,12,1],[1,"cs",1,37,10,1],[1,"cs",1,34,11,1],[1,"cs",2,35,11,1],[1,"cs",2,36,11,1],[1,"cs",2,37,11,1],[1,"cs",2,40,11,1],[1,"cs",2,40,13,1],[1,"cs",2,40,14,1],[1,"cs",2,41,13,1],[1,"cs",2,41,12,1],[1,"cs",2,41,11,1],[1,"cs",2,36,10,1],[1,"cs",2,35,10,1],[1,"cs",2,34,10,1],[1,"cs",2,35,9,1],[1,"cs",2,42,11,1],[1,"cs",2,42,12,1],[1,"cs",2,42,13,1],[1,"cs",2,42,14,1],[1,"cs",1,36,5,1],[1,"cs",2,37,4,1],[1,"cs",2,36,4,1],[1,"cs",2,35,4,1],[1,"cs",2,34,4,1],[1,"cs",2,34,5,1],[1,"cs",2,35,7,1],[1,"cs",2,36,7,1],[1,"cs",2,35,8,1],[1,"cs",2,37,7,1],[1,"cs",2,37,6,1],[1,"cs",2,37,5,1],[1,"cs",2,36,6,1],[1,"cs",2,35,6,1],[1,"cs",2,35,5,1],[1,"la",3,21,10,1],[1,"la",3,22,10,1],[1,"la",3,23,10,1],[1,"la",3,24,10,1],[1,"la",3,25,10,1],[1,"cs",2,27,2,1],[1,"cs",2,29,2,1],[1,"cs",2,28,2,1],[1,"cs",2,30,2,1],[1,"cs",2,31,2,1],[1,"cs",2,26,1,1],[1,"cs",2,25,1,1],[1,"cs",2,24,1,1],[1,"cs",2,23,1,1],[1,"cs",2,22,1,1],[1,"cs",2,21,1,1],[1,"cs",2,20,6,1],[1,"cs",2,25,50,1],[1,"cs",2,26,50,1],[1,"cs",2,26,52,1],[1,"cs",2,24,51,1],[1,"cs",2,24,50,1],[1,"cs",3,29,51,1],[1,"cs",3,26,51,1],[1,"cs",3,25,51,1],[1,"cs",3,29,52,1],[1,"cs",3,30,52,1],[1,"cs",1,18,49,1],[1,"cs",2,20,49,1],[1,"cs",2,19,49,1],[1,"cs",2,27,11,1],[1,"cs",1,23,2,1],[1,"cs",1,26,2,1],[1,"cs",0,21,2,1],[1,"cs",2,25,2,1],[1,"cs",2,24,2,1],[1,"cs",2,22,2,1],[1,"cs",2,27,3,1],[1,"cs",2,28,3,1],[1,"cs",2,29,3,1],[1,"cs",2,30,3,1],[1,"cs",2,31,3,1],[1,"cs",2,10,12,1],[1,"cs",2,11,12,1],[1,"cs",2,12,12,1],[1,"cs",1,15,15,1],[1,"cs",1,13,14,1],[1,"cs",1,30,15,1],[1,"cs",1,33,13,1],[1,"cs",1,38,15,1],[1,"cs",0,37,12,1],[1,"cs",0,20,12,1],[1,"cs",0,18,15,1],[1,"cs",0,16,12,1],[1,"cs",2,30,12,1],[1,"cs",2,30,13,1],[1,"cs",2,30,14,1],[1,"cs",2,31,15,1],[1,"cs",2,32,15,1],[1,"cs",2,33,15,1],[1,"cs",2,34,15,1],[1,"cs",2,35,15,1],[1,"cs",2,35,14,1],[1,"cs",2,36,14,1],[1,"cs",2,37,14,1],[1,"cs",2,38,14,1],[1,"cs",2,37,15,1],[1,"cs",2,36,15,1],[1,"cs",2,39,15,1],[1,"cs",2,39,14,1],[1,"cs",2,39,13,1],[1,"cs",2,39,12,1],[1,"cs",2,37,8,1],[1,"cs",2,37,9,1],[1,"cs",2,36,9,1],[1,"cs",2,36,8,1],[1,"cs",2,38,11,1],[1,"cs",2,38,12,1],[1,"cs",2,39,11,1],[1,"cs",2,38,13,1],[1,"cs",2,37,13,1],[1,"cs",2,35,13,1],[1,"cs",2,34,13,1],[1,"cs",2,32,13,1],[1,"cs",2,34,14,1],[1,"cs",2,33,14,1],[1,"cs",2,32,14,1],[1,"cs",2,31,14,1],[1,"cs",2,31,13,1],[1,"cs",2,35,12,1],[1,"cs",2,33,12,1],[1,"cs",2,32,12,1],[1,"cs",2,31,12,1],[1,"cs",2,34,12,1],[1,"cs",2,36,12,1],[1,"cs",2,36,13,1],[1,"cs",3,27,12,1],[1,"cs",3,27,13,1],[1,"cs",2,20,13,1],[1,"cs",2,20,14,1],[1,"cs",2,20,15,1],[1,"cs",2,19,15,1],[1,"cs",2,13,15,1],[1,"cs",2,12,15,1],[1,"cs",2,11,15,1],[1,"cs",2,10,14,1],[1,"cs",2,11,13,1],[1,"cs",2,12,13,1],[1,"cs",2,13,13,1],[1,"cs",2,10,13,1],[1,"cs",2,11,14,1],[1,"cs",2,12,14,1],[1,"cs",2,14,14,1],[1,"cs",2,15,14,1],[1,"cs",2,18,14,1],[1,"cs",2,19,14,1],[1,"cs",2,19,13,1],[1,"cs",2,19,12,1],[1,"cs",2,18,12,1],[1,"cs",2,17,12,1],[1,"cs",2,15,12,1],[1,"cs",2,15,13,1],[1,"cs",2,14,13,1],[1,"cs",2,18,13,1],[1,"cs",2,14,12,1],[1,"cs",2,13,12,1],[1,"la",3,21,12,1],[1,"la",3,22,12,1],[1,"la",3,23,12,1],[1,"la",3,24,12,1],[1,"la",3,25,12,1],[1,"la",3,25,14,1],[1,"la",3,23,14,1],[1,"la",3,24,14,1],[1,"la",3,21,14,1],[1,"la",3,25,13,1],[1,"la",3,25,11,1],[1,"la",3,22,14,1],[1,"cs",2,27,15,1],[1,"cs",2,27,9,1],[1,"cs",1,25,49,1],[1,"cs",2,24,49,1],[1,"cs",0,28,6,1],[1,"cs",2,29,6,1],[1,"cs",1,28,4,1],[1,"cs",2,28,5,1],[1,"cs",2,29,5,1],[1,"cs",2,29,4,1],[1,"cs",2,30,4,1],[1,"cs",2,30,5,1],[1,"cs",2,31,5,1],[1,"cs",2,31,4,1],[1,"cs",2,27,6,1],[1,"cs",2,27,5,1],[1,"cs",2,27,4,1],[1,"cs",1,26,4,1],[1,"cs",1,23,5,1],[1,"cs",0,26,5,1],[1,"cs",2,25,5,1],[1,"cs",2,24,5,1],[1,"cs",2,21,5,1],[1,"cs",2,22,5,1],[1,"cs",2,21,4,1],[1,"cs",2,22,4,1],[1,"cs",2,23,4,1],[1,"cs",2,24,4,1],[1,"cs",2,25,4,1],[1,"cs",2,25,3,1],[1,"cs",2,26,3,1],[1,"cs",2,24,3,1],[1,"cs",2,23,3,1],[1,"cs",2,22,3,1],[1,"cs",2,21,3,1],[1,"t",1,21,6,0],[1,"s",0,22,6,1],[1,"g",0,23,6,1],[1,"d",0,24,6,1],[1,"a",2,25,6,1],[1,"re",0,26,6,1],[1,"la",3,26,10,1],[1,"la",3,26,14,1],[1,"cs",0,27,10,1],[1,"cs",0,27,14,1],[1,"cs",0,0,45,1],[1,"cs",0,6,42,1],[1,"cs",1,3,46,1],[1,"cs",1,0,49,1],[1,"cs",2,0,42,1],[1,"cs",2,2,42,1],[1,"cs",2,3,42,1],[1,"cs",2,4,42,1],[1,"cs",2,5,42,1],[1,"cs",2,7,42,1],[1,"cs",2,7,43,1],[1,"cs",2,1,49,1],[1,"cs",2,0,48,1],[1,"cs",2,1,48,1],[1,"cs",2,3,47,1],[1,"cs",2,2,47,1],[1,"cs",2,1,47,1],[1,"cs",2,0,47,1],[1,"cs",2,0,46,1],[1,"cs",2,1,46,1],[1,"cs",2,2,46,1],[1,"cs",2,2,45,1],[1,"cs",2,3,45,1],[1,"cs",2,3,44,1],[1,"cs",2,2,44,1],[1,"cs",2,1,44,1],[1,"cs",2,0,44,1],[1,"cs",2,0,43,1],[1,"cs",2,1,42,1],[1,"cs",2,1,43,1],[1,"cs",2,2,43,1],[1,"cs",2,3,43,1],[1,"cs",2,4,43,1],[1,"cs",2,5,43,1],[1,"cs",2,6,43,1],[1,"cs",2,1,45,1],[1,"cs",2,17,49,1],[1,"cs",1,1,51,1],[1,"cs",1,1,57,1],[1,"cs",1,17,54,1],[1,"cs",1,15,56,1],[1,"cs",1,15,60,1],[1,"cs",1,10,60,1],[1,"cs",0,0,54,1],[1,"cs",0,0,60,1],[1,"cs",2,15,55,1],[1,"cs",2,15,57,1],[1,"cs",2,15,58,1],[1,"cs",2,15,59,1],[1,"cs",2,14,60,1],[1,"cs",2,13,60,1],[1,"cs",2,12,60,1],[1,"cs",2,11,60,1],[1,"cs",2,9,60,1],[1,"cs",2,8,60,1],[1,"cs",2,1,50,1],[1,"cs",2,0,50,1],[1,"cs",2,0,51,1],[1,"cs",2,0,52,1],[1,"cs",2,0,53,1],[1,"cs",2,0,55,1],[1,"cs",2,0,56,1],[1,"cs",2,0,57,1],[1,"cs",2,0,58,1],[1,"cs",2,0,59,1],[1,"cs",2,1,60,1],[1,"cs",2,2,60,1],[1,"cs",2,1,59,1],[1,"cs",2,1,58,1],[1,"cs",2,1,53,1],[1,"cs",2,1,54,1],[1,"cs",2,1,56,1],[1,"cs",2,1,55,1],[1,"cs",2,1,52,1],[1,"cs",2,17,53,1],[1,"cs",2,17,55,1],[1,"cs",2,18,53,1],[1,"cs",2,18,55,1],[1,"cs",2,18,56,1],[1,"cs",2,16,60,1],[1,"cs",2,16,59,1],[1,"cs",2,16,58,1],[1,"cs",2,16,57,1],[1,"cs",2,16,56,1],[1,"cs",2,17,52,1],[1,"cs",2,19,53,1],[1,"cs",2,18,54,1],[1,"cs",2,17,56,1],[1,"cs",2,19,54,1],[1,"cs",2,19,55,1],[1,"cs",2,19,56,1],[1,"cs",2,8,59,1],[1,"cs",2,9,59,1],[1,"cs",2,10,59,1],[1,"cs",2,12,59,1],[1,"cs",2,13,59,1],[1,"cs",2,14,59,1],[1,"cs",2,14,58,1],[1,"cs",3,13,58,1],[1,"cs",3,12,58,1],[1,"cs",3,11,58,1],[1,"cs",3,10,58,1],[1,"cs",3,9,58,1],[1,"cs",0,1,61,1],[1,"cs",1,13,61,1],[1,"cs",1,5,63,1],[1,"cs",1,10,62,1],[1,"cs",3,0,63,1],[1,"cs",3,1,63,1],[1,"cs",3,2,63,1],[1,"cs",3,3,63,1],[1,"cs",3,4,63,1],[1,"cs",3,8,62,1],[1,"cs",3,9,62,1],[1,"cs",3,8,63,1],[1,"cs",3,6,63,1],[1,"cs",3,7,63,1],[1,"cs",3,9,63,1],[1,"cs",3,10,63,1],[1,"cs",3,11,63,1],[1,"cs",3,12,63,1],[1,"cs",3,16,61,1],[1,"cs",3,15,61,1],[1,"cs",3,14,61,1],[1,"cs",3,12,61,1],[1,"cs",3,11,61,1],[1,"cs",3,10,61,1],[1,"cs",3,9,61,1],[1,"cs",3,8,61,1],[1,"cs",3,2,61,1],[1,"cs",3,0,61,1],[1,"cs",3,0,62,1],[1,"cs",3,1,62,1],[1,"cs",3,2,62,1],[1,"cs",3,11,62,1],[1,"cs",3,12,62,1],[1,"cs",1,37,52,1],[1,"cs",3,29,50,1],[1,"cs",3,26,49,1],[1,"cs",0,60,40,1],[1,"cs",3,55,21,1],[1,"cs",3,54,21,1],[1,"cs",3,53,21,1],[1,"cs",3,54,22,1],[1,"cs",3,55,22,1],[1,"cs",3,52,22,1],[1,"cs",3,60,39,1],[1,"cs",3,59,40,1],[1,"cs",3,59,39,1],[1,"cs",3,54,37,1],[1,"cs",3,53,37,1],[1,"cs",1,55,37,1],[1,"ma",1,8,6,1],[1,"ma",2,4,6,1],[1,"cs",1,39,54,1],[1,"cs",1,20,55,1],[1,"cs",0,20,53,1],[1,"cs",3,39,56,1],[1,"cs",3,39,55,1],[1,"cs",3,41,54,1],[1,"cs",3,41,55,1],[1,"cs",3,40,56,1],[1,"cs",3,40,55,1],[1,"cs",3,40,54,1],[1,"cs",3,20,56,1],[1,"cs",3,20,54,1],[1,"cs",0,41,56,1],[1,"cs",1,38,55,1],[1,"cs",1,31,56,1],[1,"cs",1,31,53,1],[1,"cs",0,37,56,1],[1,"cs",0,34,54,1],[1,"cs",0,26,56,1],[1,"cs",0,30,55,1],[1,"cs",3,38,56,1],[1,"cs",3,36,56,1],[1,"cs",3,35,56,1],[1,"cs",3,34,56,1],[1,"cs",3,33,56,1],[1,"cs",3,32,56,1],[1,"cs",3,30,56,1],[1,"cs",3,29,56,1],[1,"cs",3,25,56,1],[1,"cs",3,25,55,1],[1,"cs",3,26,55,1],[1,"cs",3,29,55,1],[1,"cs",3,31,55,1],[1,"cs",3,33,55,1],[1,"cs",3,34,55,1],[1,"cs",3,35,55,1],[1,"cs",3,36,55,1],[1,"cs",3,32,55,1],[1,"cs",3,37,54,1],[1,"cs",3,38,54,1],[1,"cs",3,37,55,1],[1,"cs",3,37,53,1],[1,"cs",3,38,53,1],[1,"cs",3,36,53,1],[1,"cs",3,35,53,1],[1,"cs",3,34,53,1],[1,"cs",3,30,53,1],[1,"cs",3,29,53,1],[1,"cs",3,26,53,1],[1,"cs",3,25,53,1],[1,"cs",3,25,54,1],[1,"cs",3,29,54,1],[1,"cs",3,30,54,1],[1,"cs",3,31,54,1],[1,"cs",3,32,54,1],[1,"cs",3,33,54,1],[1,"cs",3,35,54,1],[1,"cs",3,36,54,1],[1,"cs",1,44,54,1],[1,"cs",3,46,53,1],[1,"cs",3,46,54,1],[1,"cs",3,46,55,1],[1,"cs",3,46,56,1],[1,"cs",3,45,56,1],[1,"cs",3,45,55,1],[1,"cs",3,45,54,1],[1,"cs",3,45,53,1],[1,"cs",3,42,54,1],[1,"cs",3,43,54,1],[1,"cs",3,43,55,1],[1,"cs",3,42,56,1],[1,"cs",3,42,55,1],[1,"cs",3,43,56,1],[1,"cs",3,44,55,1],[1,"cs",3,44,56,1],[1,"b",1,34,15,0],[1,"b",1,37,15,0],[1,"cs",1,53,53,1],[1,"cs",1,58,55,1],[1,"cs",1,68,53,1],[1,"cs",1,73,53,1],[1,"cs",0,56,53,1],[1,"cs",3,52,56,1],[1,"cs",3,53,56,1],[1,"cs",3,55,56,1],[1,"cs",3,56,56,1],[1,"cs",3,57,56,1],[1,"cs",3,58,56,1],[1,"cs",3,59,56,1],[1,"cs",3,60,56,1],[1,"cs",3,61,56,1],[1,"cs",3,60,55,1],[1,"cs",3,59,55,1],[1,"cs",3,57,55,1],[1,"cs",3,56,55,1],[1,"cs",3,55,55,1],[1,"cs",3,54,55,1],[1,"cs",3,53,55,1],[1,"cs",3,52,55,1],[1,"cs",3,52,54,1],[1,"cs",3,53,54,1],[1,"cs",3,54,54,1],[1,"cs",3,54,53,1],[1,"cs",3,52,53,1],[1,"cs",3,55,53,1],[1,"cs",3,57,53,1],[1,"cs",3,58,53,1],[1,"cs",3,62,53,1],[1,"cs",3,63,53,1],[1,"cs",3,64,53,1],[1,"cs",3,67,53,1],[1,"cs",3,69,53,1],[1,"cs",3,70,53,1],[1,"cs",3,71,53,1],[1,"cs",3,72,53,1],[1,"cs",3,73,54,1],[1,"cs",3,69,54,1],[1,"cs",3,72,54,1],[1,"cs",3,71,54,1],[1,"cs",3,70,54,1],[1,"cs",3,68,54,1],[1,"cs",3,67,54,1],[1,"cs",3,64,54,1],[1,"cs",3,63,54,1],[1,"cs",3,58,54,1],[1,"cs",3,57,54,1],[1,"cs",3,56,54,1],[1,"cs",3,55,54,1],[1,"cs",3,74,54,1],[1,"cs",3,74,53,1],[1,"cs",1,78,53,1],[1,"cs",0,77,54,1],[1,"cs",3,76,54,1],[1,"cs",3,75,54,1],[1,"cs",3,76,53,1],[1,"cs",3,75,53,1],[1,"cs",3,77,53,1],[1,"cs",1,40,49,1],[1,"cs",2,52,48,1],[1,"cs",2,45,49,1],[1,"cs",2,46,50,1],[1,"cs",2,45,50,1],[1,"cs",2,38,50,1],[1,"cs",2,38,49,1],[1,"cs",2,39,49,1],[1,"cs",2,43,49,1],[1,"cs",2,44,49,1],[1,"cs",2,46,49,1],[1,"cs",2,52,49,1],[1,"cs",2,53,50,1],[1,"cs",2,54,43,1],[1,"cs",1,52,47,1],[1,"cs",2,53,22,1],[1,"cs",1,54,15,1],[1,"cs",3,54,17,1],[1,"cs",3,54,18,1],[1,"cs",3,54,16,1],[1,"cs",3,42,15,1],[1,"cs",3,48,14,1],[1,"cs",3,48,13,1],[1,"cs",3,48,12,1],[1,"cs",2,48,11,1],[1,"cs",1,13,24,1],[1,"cs",1,11,21,1],[1,"cs",1,13,17,1],[1,"cs",1,10,16,1],[1,"cs",1,10,39,1],[1,"cs",0,10,41,1],[1,"cs",0,10,24,1],[1,"cs",3,13,23,1],[1,"cs",3,13,22,1],[1,"cs",3,12,16,1],[1,"cs",3,11,16,1],[1,"cs",3,10,17,1],[1,"cs",3,10,18,1],[1,"cs",3,11,18,1],[1,"cs",3,11,17,1],[1,"cs",3,12,17,1],[1,"cs",3,12,18,1],[1,"cs",3,12,19,1],[1,"cs",3,12,21,1],[1,"cs",3,12,22,1],[1,"cs",3,12,23,1],[1,"cs",3,12,24,1],[1,"cs",3,11,24,1],[1,"cs",3,10,23,1],[1,"cs",3,11,23,1],[1,"cs",3,10,22,1],[1,"cs",3,11,22,1],[1,"cs",3,10,21,1],[1,"cs",3,10,20,1],[1,"cs",3,11,19,1],[1,"cs",3,11,20,1],[1,"cs",3,10,19,1],[1,"cs",3,11,39,1],[1,"cs",3,12,39,1],[1,"cs",3,13,39,1],[1,"cs",3,12,40,1],[1,"cs",3,11,41,1],[1,"cs",3,11,40,1],[1,"cs",3,10,40,1],[1,"cs",3,10,15,1],[1,"cs",3,9,16,1],[1,"cs",3,3,22,1],[1,"cs",3,2,22,1],[1,"cs",3,1,22,1],[1,"cs",3,0,22,1],[1,"cs",3,0,21,1],[1,"cs",3,1,21,1],[1,"cs",3,3,20,1],[1,"cs",3,2,20,1],[1,"cs",3,1,20,1],[1,"cs",3,0,20,1],[1,"cs",3,0,19,1],[1,"cs",3,1,19,1],[1,"cs",3,2,19,1],[1,"cs",3,2,18,1],[1,"cs",3,1,18,1],[1,"cs",3,0,18,1],[1,"cs",1,2,21,1],[1,"cs",1,35,29,1],[1,"cs",1,31,28,1],[1,"cs",1,30,29,1],[1,"cs",1,30,34,1],[1,"cs",1,35,35,1],[1,"cs",0,35,34,1],[1,"cs",0,34,28,1],[1,"cs",0,30,35,1],[1,"cs",2,34,35,1],[1,"cs",2,30,28,1],[1,"cs",3,35,28,1],[1,"cs",3,33,28,1],[1,"cs",3,32,28,1],[1,"cs",3,33,35,1],[1,"cs",3,32,35,1],[1,"cs",3,31,35,1],[1,"plm",2,30,29,0],[1,"plm",1,31,28,0],[1,"plm",1,35,34,0],[1,"plm",2,34,35,0],[1,"cs",1,14,57,1],[1,"cs",1,13,52,1],[1,"cs",0,10,45,1],[1,"cs",3,13,43,1],[1,"cs",3,12,42,1],[1,"cs",3,11,42,1],[1,"cs",3,10,42,1],[1,"cs",3,10,43,1],[1,"cs",3,11,43,1],[1,"cs",3,12,43,1],[1,"cs",3,11,44,1],[1,"cs",3,10,44,1],[1,"cs",3,11,45,1],[1,"cs",3,11,47,1],[1,"cs",3,12,52,1],[1,"cs",3,13,51,1],[1,"cs",3,13,50,1],[1,"cs",3,13,49,1],[1,"cs",3,14,55,1],[1,"cs",3,13,56,1],[1,"cs",3,13,55,1],[1,"cs",3,12,56,1],[1,"cs",3,13,57,1],[1,"cs",3,14,56,1],[1,"cs",3,12,57,1],[1,"cs",3,11,59,1],[1,"cs",3,16,55,1],[1,"cs",3,12,51,1],[1,"cs",3,12,50,1],[1,"cs",3,10,46,1],[1,"cs",3,11,46,1],[1,"cs",3,10,47,1],[1,"cs",1,54,23,1],[1,"cs",1,53,27,1],[1,"cs",1,53,34,1],[1,"cs",0,55,29,1],[1,"cs",0,57,23,1],[1,"cs",3,60,38,1],[1,"cs",3,58,38,1],[1,"cs",3,59,38,1],[1,"cs",3,53,36,1],[1,"cs",3,52,35,1],[1,"cs",3,52,34,1],[1,"cs",3,54,34,1],[1,"cs",3,55,34,1],[1,"cs",3,54,35,1],[1,"cs",3,53,35,1],[1,"cs",3,55,35,1],[1,"cs",3,55,36,1],[1,"cs",3,54,36,1],[1,"cs",0,55,25,1],[1,"cs",3,55,27,1],[1,"cs",3,55,28,1],[1,"cs",3,54,27,1],[1,"cs",3,54,28,1],[1,"cs",3,54,25,1],[1,"cs",3,54,24,1],[1,"cs",3,53,24,1],[1,"cs",3,53,25,1],[1,"cs",3,53,23,1],[1,"cs",3,55,23,1],[1,"cs",3,55,24,1],[1,"cs",3,56,23,1],[1,"cs",3,56,24,1],[1,"cs",3,57,24,1],[1,"cs",3,52,29,1],[1,"cs",3,53,29,1],[1,"cs",3,53,28,1],[1,"cs",3,52,28,1],[1,"cs",3,54,29,1],[1,"cs",1,86,27,1],[1,"cs",1,87,35,1],[1,"cs",1,83,38,1],[1,"cs",1,84,25,1],[1,"cs",0,89,37,1],[1,"cs",0,85,35,1],[1,"cs",3,85,27,1],[1,"cs",3,86,28,1],[1,"cs",3,86,29,1],[1,"cs",3,85,29,1],[1,"cs",3,85,30,1],[1,"cs",3,85,34,1],[1,"cs",3,85,36,1],[1,"cs",3,85,37,1],[1,"cs",3,85,38,1],[1,"cs",3,82,38,1],[1,"cs",3,79,38,1],[1,"cs",3,80,38,1],[1,"cs",3,81,38,1],[1,"cs",3,87,37,1],[1,"cs",3,87,38,1],[1,"cs",3,86,38,1],[1,"cs",3,86,37,1],[1,"cs",3,86,36,1],[1,"cs",3,86,35,1],[1,"cs",3,86,34,1],[1,"cs",3,87,36,1],[1,"cs",3,88,38,1],[1,"cs",3,88,37,1],[1,"cs",3,89,38,1],[1,"cs",3,89,36,1],[1,"cs",3,88,35,1],[1,"cs",3,88,36,1],[1,"cs",3,89,35,1],[1,"cs",3,89,32,1],[1,"cs",3,88,34,1],[1,"cs",3,88,30,1],[1,"cs",3,87,30,1],[1,"cs",3,87,34,1],[1,"cs",3,87,29,1],[1,"cs",3,87,28,1],[1,"cs",3,88,29,1],[1,"cs",3,88,28,1],[1,"cs",3,88,27,1],[1,"cs",3,89,27,1],[1,"cs",3,89,28,1],[1,"cs",3,89,30,1],[1,"cs",3,89,31,1],[1,"cs",3,89,33,1],[1,"cs",3,90,32,1],[1,"cs",3,89,34,1],[1,"cs",3,89,29,1],[1,"cs",3,87,27,1],[1,"cs",3,83,25,1],[1,"cs",3,85,25,1],[1,"cs",3,86,25,1],[1,"cs",3,87,25,1],[1,"cs",3,88,25,1],[1,"cs",3,90,26,1],[1,"cs",3,90,27,1],[1,"cs",3,90,28,1],[1,"cs",3,90,29,1],[1,"cs",3,90,30,1],[1,"cs",3,90,31,1],[1,"cs",3,90,33,1],[1,"cs",3,90,34,1],[1,"cs",3,90,35,1],[1,"cs",3,90,36,1],[1,"cs",3,90,37,1],[1,"cs",3,90,38,1],[1,"cs",3,91,29,1],[1,"cs",3,91,30,1],[1,"cs",3,91,34,1],[1,"cs",3,91,35,1],[1,"cs",3,91,36,1],[1,"cs",0,77,39,1],[1,"cs",0,86,30,1],[1,"ma",3,88,32,1],[1,"la",0,87,32,1],[1,"f",2,6,52,1],[1,"f",2,7,52,1],[1,"f",2,7,53,1],[1,"f",2,6,53,1],[1,"s",0,7,52,1],[1,"s",0,7,53,1],[1,"s",0,6,53,1],[1,"s",0,6,52,1],[1,"g",0,7,52,1],[1,"g",0,6,52,1],[1,"g",0,6,53,1],[1,"g",0,7,53,1],[1,"d",0,7,52,1],[1,"d",0,6,52,1],[1,"d",0,6,53,1],[1,"d",0,7,53,1],[1,"a",0,7,52,1],[1,"a",0,6,52,1],[1,"a",0,6,53,1],[1,"a",0,7,53,1],[1,"re",2,7,52,1],[1,"re",2,6,52,1],[1,"re",2,6,53,1],[1,"re",2,7,53,1],[1,"fo",2,15,51,0],[1,"fo",2,13,54,0],[1,"fo",2,11,57,0],[1,"fo",2,2,56,0],[1,"fo",2,8,48,0],[1,"fo",1,4,49,0],[1,"fo",1,9,53,0],[1,"fo",1,5,56,0],[1,"fo",1,5,52,0],[1,"fo",2,2,48,0],[1,"fo",2,8,56,0],[1,"s",0,21,6,1],[1,"g",0,21,6,1],[1,"d",0,21,6,1],[1,"a",0,21,6,1],[1,"re",2,21,6,1],[1,"t",1,22,6,0],[1,"t",1,23,6,0],[1,"t",1,24,6,0],[1,"t",1,25,6,0],[1,"t",1,26,6,0],[1,"g",0,22,6,1],[1,"d",0,22,6,1],[1,"d",0,23,6,1],[1,"d",0,25,6,1],[1,"d",0,26,6,1],[1,"g",0,26,6,1],[1,"g",0,25,6,1],[1,"g",0,24,6,1],[1,"a",0,26,6,1],[1,"a",0,24,6,1],[1,"a",0,23,6,1],[1,"a",0,22,6,1],[1,"re",2,25,6,1],[1,"re",2,24,6,1],[1,"re",2,23,6,1],[1,"re",2,22,6,1],[1,"ma",3,50,17,1],[1,"ma",3,50,19,1],[1,"ma",3,50,21,1],[1,"ma",3,50,23,1],[1,"ma",3,50,25,1],[1,"ma",1,50,36,1],[1,"ma",1,50,38,1],[1,"ma",1,50,40,1],[1,"ma",1,50,42,1],[1,"fo",2,50,42,0],[1,"fo",2,50,40,0],[1,"fo",2,50,38,0],[1,"fo",2,50,36,0],[1,"fo",2,50,25,0],[1,"fo",2,50,23,0],[1,"fo",2,50,21,0],[1,"fo",2,50,19,0],[1,"fo",2,50,17,0],[1,"cs",0,31,52,1],[1,"cs",3,32,53,1],[1,"cs",3,33,53,1],[1,"cs",1,75,44,1],[1,"cs",1,73,42,1],[1,"cs",0,66,44,1],[1,"cs",3,61,25,1],[1,"cs",3,73,43,1],[1,"cs",3,74,43,1],[1,"cs",3,75,43,1],[1,"cs",3,76,44,1],[1,"cs",3,76,43,1],[1,"cs",3,74,44,1],[1,"cs",3,71,44,1],[1,"cs",3,72,44,1],[1,"cs",3,73,44,1],[1,"cs",3,70,44,1],[1,"cs",3,69,44,1],[1,"cs",3,68,44,1],[1,"cs",3,67,44,1],[1,"cs",3,70,43,1],[1,"cs",3,71,43,1],[1,"cs",3,72,43,1],[1,"cs",3,72,42,1],[1,"cs",3,71,42,1],[1,"cs",3,70,42,1],[1,"cs",3,63,42,1],[1,"cs",3,64,42,1],[1,"cs",3,64,41,1],[1,"cs",3,63,41,1],[1,"cs",3,61,41,1],[1,"cs",3,62,41,1],[1,"cs",3,64,40,1],[1,"cs",3,63,40,1],[1,"cs",3,61,40,1],[1,"cs",3,61,39,1],[1,"cs",3,61,38,1],[1,"cs",1,68,40,1],[1,"cs",1,68,43,1],[1,"cs",1,67,42,1],[1,"cs",1,66,41,1],[1,"cs",1,66,40,1],[1,"cs",0,69,42,1],[1,"cs",3,69,43,1],[1,"cs",3,68,42,1],[1,"cs",3,68,41,1],[1,"cs",3,67,41,1],[1,"cs",3,66,42,1],[1,"cs",3,65,41,1],[1,"cs",3,65,40,1],[1,"cs",3,67,40,1],[1,"s",2,4,59,1],[1,"s",0,7,59,1],[1,"s",0,7,60,1],[1,"s",0,7,61,1],[1,"s",0,7,62,1],[1,"s",0,6,62,1],[1,"s",0,5,62,1],[1,"s",0,4,62,1],[1,"s",0,3,62,1],[1,"s",0,3,61,1],[1,"s",0,3,60,1],[1,"s",0,3,59,1],[1,"cs",3,2,58,1],[1,"cs",3,2,59,1],[1,"cs",3,3,58,1],[1,"cs",3,7,58,1],[1,"cs",0,12,49,1],[1,"cs",0,12,55,1],[1,"cs",0,8,58,1],[1,"cs",1,7,47,1],[1,"cs",1,4,47,1],[1,"cs",1,6,45,1],[1,"cs",3,6,47,1],[1,"cs",3,5,47,1],[1,"cs",3,4,46,1],[1,"cs",3,5,46,1],[1,"cs",3,6,46,1],[1,"cs",3,7,46,1],[1,"cs",3,7,45,1],[1,"cs",3,7,44,1],[1,"cs",3,6,44,1],[1,"cs",3,5,44,1],[1,"cs",3,4,44,1],[1,"cs",3,4,45,1],[1,"cs",3,5,45,1],[1,"cs",1,24,45,1],[1,"cs",1,17,48,1],[1,"cs",1,46,48,1],[1,"cs",1,46,45,1],[1,"cs",1,38,45,1],[1,"cs",0,44,47,1],[1,"cs",0,20,48,1],[1,"cs",0,24,48,1],[1,"cs",0,39,47,1],[1,"cs",3,44,48,1],[1,"cs",3,37,48,1],[1,"cs",3,37,47,1],[1,"cs",3,38,47,1],[1,"cs",3,39,48,1],[1,"cs",3,38,48,1],[1,"cs",3,40,48,1],[1,"cs",3,40,47,1],[1,"cs",3,43,47,1],[1,"cs",3,45,47,1],[1,"cs",3,46,47,1],[1,"cs",3,45,48,1],[1,"cs",3,45,45,1],[1,"cs",3,44,45,1],[1,"cs",3,43,45,1],[1,"cs",3,40,45,1],[1,"cs",3,39,45,1],[1,"cs",3,37,45,1],[1,"cs",3,37,46,1],[1,"cs",3,38,46,1],[1,"cs",3,39,46,1],[1,"cs",3,40,46,1],[1,"cs",3,43,46,1],[1,"cs",3,44,46,1],[1,"cs",3,45,46,1],[1,"cs",3,46,46,1],[1,"cs",3,29,45,1],[1,"cs",3,18,45,1],[1,"cs",3,17,45,1],[1,"cs",3,17,46,1],[1,"cs",3,18,48,1],[1,"cs",3,18,47,1],[1,"cs",3,17,47,1],[1,"cs",3,19,48,1],[1,"cs",3,19,47,1],[1,"cs",3,20,47,1],[1,"cs",3,24,46,1],[1,"cs",3,29,46,1],[1,"cs",3,29,47,1],[1,"cs",3,29,48,1],[1,"cs",3,26,48,1],[1,"cs",3,25,48,1],[1,"cs",3,25,47,1],[1,"cs",3,24,47,1],[1,"cs",3,32,52,1],[1,"cs",3,34,52,1],[1,"cs",3,33,51,1],[1,"cs",3,33,50,1],[1,"cs",3,33,49,1],[1,"cs",3,33,48,1],[1,"cs",3,33,45,1],[1,"cs",3,33,46,1],[1,"cs",3,33,47,1],[1,"cs",1,9,64,1],[1,"cs",1,9,65,1],[1,"cs",1,2,64,1],[1,"cs",1,2,65,1],[1,"cs",1,6,65,1],[1,"cs",1,5,64,1],[1,"cs",1,0,65,1],[1,"cs",1,7,65,1],[1,"cs",0,12,65,1],[1,"cs",0,3,65,1],[1,"cs",0,0,64,1],[1,"cs",3,10,65,1],[1,"cs",3,11,65,1],[1,"cs",3,8,65,1],[1,"cs",3,5,65,1],[1,"cs",3,4,65,1],[1,"cs",3,1,65,1],[1,"cs",3,1,64,1],[1,"cs",3,3,64,1],[1,"cs",3,4,64,1],[1,"cs",3,6,64,1],[1,"cs",3,7,64,1],[1,"cs",3,8,64,1],[1,"cs",3,10,64,1],[1,"cs",3,11,64,1],[1,"cs",3,12,64,1],[1,"cs",2,68,45,1],[1,"cs",2,69,45,1],[1,"t",2,68,46,0],[1,"t",2,68,47,0],[1,"s",0,68,46,1],[1,"s",0,68,47,1],[1,"g",0,68,46,1],[1,"g",0,68,47,1],[1,"d",0,68,46,1],[1,"d",0,68,47,1],[1,"a",0,68,46,1],[1,"a",0,68,47,1],[1,"re",2,68,46,1],[1,"re",2,68,47,1],[1,"cs",2,56,46,1],[1,"cs",2,55,46,1],[1,"cs",2,50,45,1],[1,"cs",2,50,46,1],[1,"cs",2,47,47,1],[1,"cs",2,48,47,1],[1,"cs",2,50,47,1],[1,"cs",2,51,47,1],[1,"cs",2,51,48,1],[1,"cs",2,50,48,1],[1,"cs",2,49,48,1],[1,"cs",2,48,48,1],[1,"cs",2,47,48,1],[1,"cs",2,47,49,1],[1,"cs",2,49,49,1],[1,"cs",2,50,49,1],[1,"cs",2,51,49,1],[1,"cs",2,50,50,1],[1,"cs",2,49,50,1],[1,"cs",2,48,50,1],[1,"cs",2,47,50,1],[1,"cs",2,51,50,1],[1,"cs",2,51,51,1],[1,"cs",2,48,51,1],[1,"cs",2,47,51,1],[1,"cs",2,47,52,1],[1,"cs",2,49,52,1],[1,"cs",2,50,52,1],[1,"cs",2,47,53,1],[1,"cs",2,48,53,1],[1,"cs",2,50,53,1],[1,"cs",2,51,53,1],[1,"cs",2,51,54,1],[1,"cs",2,50,54,1],[1,"cs",2,49,54,1],[1,"cs",2,48,54,1],[1,"cs",2,47,54,1],[1,"cs",2,49,55,1],[1,"cs",2,50,55,1],[1,"cs",2,48,55,1],[1,"cs",2,47,55,1],[1,"cs",2,47,56,1],[1,"cs",2,49,56,1],[1,"cs",2,51,56,1],[1,"cs",2,49,51,1],[1,"cs",2,52,52,1],[1,"cs",2,50,56,1],[1,"cs",1,48,49,1],[1,"cs",1,51,46,1],[1,"cs",1,50,51,1],[1,"cs",1,48,56,1],[1,"cs",1,51,55,1],[1,"cs",0,54,56,1],[1,"cs",0,49,53,1],[1,"cs",0,49,47,1],[1,"cs",0,52,50,1],[1,"cs",1,48,52,1],[1,"cs",1,51,52,1],[1,"cs",2,52,37,1],[1,"s",2,52,21,1],[1,"g",2,52,23,1],[1,"d",2,52,25,1],[1,"a",2,52,36,1],[1,"re",0,52,38,1],[1,"m",0,52,40,1],[1,"la",2,52,42,1],[1,"m",2,41,53,1],[1,"m",2,42,53,1],[1,"ma",3,39,53,1],[1,"ma",0,41,49,1],[1,"ma",0,42,49,1],[1,"ma",2,44,53,1],[1,"cs",2,24,52,1],[1,"cs",2,24,53,1],[1,"cs",2,24,55,1],[1,"cs",2,24,56,1],[1,"cs",0,25,52,1],[1,"cs",1,24,54,1],[1,"cs",2,45,61,1],[1,"cs",2,46,61,1],[1,"cs",2,48,61,1],[1,"cs",2,49,61,1],[1,"cs",2,52,61,1],[1,"cs",2,51,61,1],[1,"cs",2,50,61,1],[1,"cs",2,47,61,1],[1,"cs",2,61,61,1],[1,"cs",2,59,61,1],[1,"cs",2,58,61,1],[1,"cs",2,57,61,1],[1,"cs",2,56,61,1],[1,"cs",2,55,61,1],[1,"cs",2,54,61,1],[1,"cs",2,53,61,1],[1,"cs",2,60,61,1],[1,"cs",2,45,60,1],[1,"cs",2,50,60,1],[1,"cs",2,53,60,1],[1,"cs",2,55,60,1],[1,"cs",2,58,60,1],[1,"cs",2,59,60,1],[1,"cs",2,60,60,1],[1,"cs",2,61,60,1],[1,"cs",2,61,57,1],[1,"cs",2,59,57,1],[1,"cs",2,57,58,1],[1,"cs",2,53,58,1],[1,"cs",2,49,58,1],[1,"cs",2,45,57,1],[1,"cs",2,46,57,1],[1,"cs",2,48,57,1],[1,"cs",2,50,57,1],[1,"cs",2,52,57,1],[1,"cs",2,53,57,1],[1,"cs",2,54,57,1],[1,"cs",2,55,57,1],[1,"cs",2,57,57,1],[1,"cs",2,58,57,1],[1,"cs",2,60,57,1],[1,"cs",2,60,58,1],[1,"cs",2,59,58,1],[1,"cs",2,60,59,1],[1,"cs",2,61,59,1],[1,"cs",2,58,59,1],[1,"cs",2,59,59,1],[1,"cs",2,56,59,1],[1,"cs",2,57,59,1],[1,"cs",2,55,58,1],[1,"cs",2,56,57,1],[1,"cs",2,56,58,1],[1,"cs",2,56,60,1],[1,"cs",2,53,59,1],[1,"cs",2,54,58,1],[1,"cs",2,55,59,1],[1,"cs",2,54,59,1],[1,"cs",2,52,59,1],[1,"cs",2,50,58,1],[1,"cs",2,45,59,1],[1,"cs",2,45,58,1],[1,"cs",2,49,59,1],[1,"cs",2,48,59,1],[1,"cs",2,47,58,1],[1,"cs",2,46,59,1],[1,"cs",2,46,60,1],[1,"cs",2,47,59,1],[1,"cs",2,48,58,1],[1,"cs",2,49,57,1],[1,"cs",2,47,57,1],[1,"cs",2,48,60,1],[1,"cs",2,49,60,1],[1,"cs",2,51,58,1],[1,"cs",2,51,57,1],[1,"cs",2,51,59,1],[1,"cs",2,52,60,1],[1,"cs",2,51,60,1],[1,"cs",0,58,58,1],[1,"cs",1,47,60,1],[1,"cs",0,46,58,1],[1,"cs",1,54,60,1],[1,"cs",1,61,58,1],[1,"cs",1,57,60,1],[1,"cs",1,52,58,1],[1,"cs",0,50,59,1],[1,"cs",2,17,50,1],[1,"cs",2,18,50,1],[1,"cs",2,19,50,1],[1,"cs",2,20,50,1],[1,"cs",2,20,51,1],[1,"cs",2,19,51,1],[1,"cs",2,18,51,1],[1,"cs",2,17,51,1],[1,"cs",2,26,54,1],[1,"cs",2,26,47,1],[1,"cs",2,27,56,1],[1,"cs",2,27,55,1],[1,"cs",2,28,55,1],[1,"cs",2,28,53,1],[1,"cs",2,27,53,1],[1,"cs",2,28,52,1],[1,"cs",2,27,54,1],[1,"cs",2,28,51,1],[1,"cs",2,27,51,1],[1,"cs",2,28,50,1],[1,"cs",2,27,50,1],[1,"cs",2,28,48,1],[1,"cs",2,27,49,1],[1,"cs",2,27,48,1],[1,"cs",2,27,47,1],[1,"cs",2,28,46,1],[1,"cs",2,28,45,1],[1,"cs",2,28,47,1],[1,"cs",2,45,65,1],[1,"cs",2,46,65,1],[1,"cs",2,47,65,1],[1,"cs",2,49,65,1],[1,"cs",2,50,65,1],[1,"cs",2,51,65,1],[1,"cs",2,52,65,1],[1,"cs",2,53,65,1],[1,"cs",2,54,65,1],[1,"cs",2,56,65,1],[1,"cs",2,56,64,1],[1,"cs",2,57,64,1],[1,"cs",2,57,63,1],[1,"cs",2,57,65,1],[1,"cs",2,52,64,1],[1,"cs",2,48,65,1],[1,"cs",2,53,64,1],[1,"cs",2,54,63,1],[1,"cs",2,56,63,1],[1,"cs",2,56,62,1],[1,"cs",2,54,64,1],[1,"cs",2,55,64,1],[1,"cs",2,55,62,1],[1,"cs",2,54,62,1],[1,"cs",2,53,62,1],[1,"cs",2,52,62,1],[1,"cs",2,50,62,1],[1,"cs",2,49,62,1],[1,"cs",2,48,62,1],[1,"cs",2,47,62,1],[1,"cs",2,45,62,1],[1,"cs",2,45,63,1],[1,"cs",2,46,63,1],[1,"cs",2,48,63,1],[1,"cs",2,49,63,1],[1,"cs",2,50,63,1],[1,"cs",2,52,63,1],[1,"cs",2,53,63,1],[1,"cs",2,50,64,1],[1,"cs",2,49,64,1],[1,"cs",2,48,64,1],[1,"cs",2,47,64,1],[1,"cs",2,46,64,1],[1,"cs",2,51,63,1],[1,"cs",2,47,63,1],[1,"cs",1,27,52,1],[1,"cs",1,28,54,1],[1,"cs",1,28,49,1],[1,"cs",1,55,65,1],[1,"cs",0,57,62,1],[1,"cs",0,45,64,1],[1,"cs",1,46,62,1],[1,"cs",1,51,62,1],[1,"cs",1,51,64,1],[1,"cs",0,55,63,1],[1,"s",2,6,59,1],[1,"cs",2,33,52,1],[1,"cs",2,69,74,1],[1,"cs",2,69,75,1],[1,"cs",2,69,76,1],[1,"cs",2,69,77,1],[1,"cs",2,69,78,1],[1,"cs",2,69,79,1],[1,"cs",2,69,81,1],[1,"cs",2,69,82,1],[1,"cs",2,69,83,1],[1,"cs",2,69,84,1],[1,"cs",2,69,86,1],[1,"cs",2,69,87,1],[1,"cs",2,69,91,1],[1,"cs",2,69,92,1],[1,"cs",2,69,93,1],[1,"cs",2,69,80,1],[1,"cs",2,69,85,1],[1,"cs",2,69,88,1],[1,"cs",2,69,90,1],[1,"cs",2,69,94,1],[1,"cs",2,69,95,1],[1,"cs",2,69,96,1],[1,"cs",2,71,96,1],[1,"cs",2,73,96,1],[1,"cs",2,74,96,1],[1,"cs",2,75,96,1],[1,"cs",2,76,96,1],[1,"cs",2,77,96,1],[1,"cs",2,78,96,1],[1,"cs",2,80,96,1],[1,"cs",2,81,96,1],[1,"cs",2,82,96,1],[1,"cs",2,83,96,1],[1,"cs",2,84,96,1],[1,"cs",2,85,96,1],[1,"cs",2,86,96,1],[1,"cs",2,88,96,1],[1,"cs",2,89,96,1],[1,"cs",2,90,96,1],[1,"cs",2,91,96,1],[1,"cs",2,70,74,1],[1,"cs",2,71,74,1],[1,"cs",2,72,74,1],[1,"cs",2,73,74,1],[1,"cs",2,74,74,1],[1,"cs",2,75,74,1],[1,"cs",2,78,74,1],[1,"cs",2,76,74,1],[1,"cs",2,83,74,1],[1,"cs",2,84,74,1],[1,"cs",2,85,74,1],[1,"cs",2,86,74,1],[1,"cs",2,89,74,1],[1,"cs",2,87,74,1],[1,"cs",2,88,74,1],[1,"cs",2,90,74,1],[1,"cs",2,91,74,1],[1,"cs",2,91,75,1],[1,"cs",2,91,76,1],[1,"cs",2,91,77,1],[1,"cs",2,91,78,1],[1,"cs",2,91,79,1],[1,"cs",2,91,80,1],[1,"cs",2,91,81,1],[1,"cs",2,91,82,1],[1,"cs",2,91,83,1],[1,"cs",2,91,84,1],[1,"cs",2,91,85,1],[1,"cs",2,91,86,1],[1,"cs",2,91,87,1],[1,"cs",2,91,88,1],[1,"cs",2,91,89,1],[1,"cs",2,91,90,1],[1,"cs",2,91,91,1],[1,"cs",2,91,93,1],[1,"cs",2,91,94,1],[1,"cs",2,91,95,1],[1,"cs",2,75,82,1],[1,"cs",2,75,83,1],[1,"cs",2,75,85,1],[1,"cs",2,75,86,1],[1,"cs",2,75,88,1],[1,"cs",2,80,88,1],[1,"cs",2,80,86,1],[1,"cs",2,80,85,1],[1,"cs",2,80,83,1],[1,"cs",2,80,82,1],[1,"cs",2,85,82,1],[1,"cs",2,85,83,1],[1,"cs",2,85,85,1],[1,"cs",2,85,86,1],[1,"cs",2,85,88,1],[1,"cs",2,70,75,1],[1,"cs",2,70,76,1],[1,"cs",2,71,76,1],[1,"cs",2,71,77,1],[1,"cs",2,70,77,1],[1,"cs",2,71,78,1],[1,"cs",2,71,79,1],[1,"cs",2,70,79,1],[1,"cs",2,70,80,1],[1,"cs",2,71,81,1],[1,"cs",2,70,81,1],[1,"cs",2,71,80,1],[1,"cs",2,70,83,1],[1,"cs",2,71,83,1],[1,"cs",2,71,82,1],[1,"cs",2,70,82,1],[1,"cs",2,70,88,1],[1,"cs",2,71,87,1],[1,"cs",2,70,87,1],[1,"cs",2,71,88,1],[1,"cs",2,71,89,1],[1,"cs",2,70,89,1],[1,"cs",2,70,90,1],[1,"cs",2,71,90,1],[1,"cs",2,70,91,1],[1,"cs",2,71,91,1],[1,"cs",2,71,92,1],[1,"cs",2,70,92,1],[1,"cs",2,71,93,1],[1,"cs",2,70,94,1],[1,"cs",2,70,95,1],[1,"cs",2,71,95,1],[1,"cs",2,71,94,1],[1,"cs",2,72,94,1],[1,"cs",2,73,95,1],[1,"cs",2,72,95,1],[1,"cs",2,74,94,1],[1,"cs",2,74,95,1],[1,"cs",2,75,95,1],[1,"cs",2,75,94,1],[1,"cs",2,76,95,1],[1,"cs",2,77,95,1],[1,"cs",2,77,94,1],[1,"cs",2,78,94,1],[1,"cs",2,78,95,1],[1,"cs",2,79,95,1],[1,"cs",2,79,94,1],[1,"cs",2,80,94,1],[1,"cs",2,80,95,1],[1,"cs",2,81,94,1],[1,"cs",2,82,94,1],[1,"cs",2,82,95,1],[1,"cs",2,83,95,1],[1,"cs",2,83,94,1],[1,"cs",2,84,94,1],[1,"cs",2,84,95,1],[1,"cs",2,85,95,1],[1,"cs",2,86,94,1],[1,"cs",2,86,95,1],[1,"cs",2,87,94,1],[1,"cs",2,87,95,1],[1,"cs",2,88,95,1],[1,"cs",2,88,94,1],[1,"cs",2,89,94,1],[1,"cs",2,90,95,1],[1,"cs",2,90,94,1],[1,"cs",2,72,75,1],[1,"cs",2,73,75,1],[1,"cs",2,74,75,1],[1,"cs",2,75,76,1],[1,"cs",2,76,76,1],[1,"cs",2,77,76,1],[1,"cs",2,78,76,1],[1,"cs",2,82,76,1],[1,"cs",2,83,76,1],[1,"cs",2,85,76,1],[1,"cs",2,86,76,1],[1,"cs",2,87,76,1],[1,"cs",2,88,76,1],[1,"cs",2,89,76,1],[1,"cs",2,90,76,1],[1,"cs",2,89,75,1],[1,"cs",2,88,75,1],[1,"cs",2,87,75,1],[1,"cs",2,86,75,1],[1,"cs",2,85,75,1],[1,"cs",2,83,75,1],[1,"cs",2,78,75,1],[1,"cs",2,76,75,1],[1,"cs",2,75,75,1],[1,"cs",2,77,75,1],[1,"cs",2,90,75,1],[1,"cs",2,84,76,1],[1,"cs",2,74,76,1],[1,"cs",2,73,76,1],[1,"cs",2,72,76,1],[1,"cs",2,90,78,1],[1,"cs",2,90,79,1],[1,"cs",2,90,80,1],[1,"cs",2,90,81,1],[1,"cs",2,90,83,1],[1,"cs",2,90,84,1],[1,"cs",2,90,85,1],[1,"cs",2,89,86,1],[1,"cs",2,89,88,1],[1,"cs",2,90,90,1],[1,"cs",2,90,91,1],[1,"cs",2,90,92,1],[1,"cs",2,90,93,1],[1,"cs",2,89,93,1],[1,"cs",2,89,92,1],[1,"cs",2,89,91,1],[1,"cs",2,89,90,1],[1,"cs",2,89,89,1],[1,"cs",2,89,87,1],[1,"cs",2,89,85,1],[1,"cs",2,89,84,1],[1,"cs",2,89,83,1],[1,"cs",2,89,81,1],[1,"cs",2,89,80,1],[1,"cs",2,89,79,1],[1,"cs",2,89,78,1],[1,"cs",2,89,77,1],[1,"cs",2,90,82,1],[1,"cs",2,90,86,1],[1,"cs",2,90,88,1],[1,"cs",2,90,89,1],[1,"cs",2,80,80,1],[1,"cs",2,80,89,1],[1,"cs",2,80,90,1],[1,"d",0,86,91,1],[1,"cs",0,84,75,1],[1,"cs",0,72,96,1],[1,"cs",0,91,92,1],[1,"cs",0,81,95,1],[1,"cs",0,90,77,1],[1,"cs",0,71,75,1],[1,"cs",1,90,87,1],[1,"cs",1,89,82,1],[1,"cs",1,89,95,1],[1,"cs",1,85,94,1],[1,"cs",1,70,78,1],[1,"cs",1,69,89,1],[1,"cs",1,70,96,1],[1,"cs",1,73,94,1],[1,"cs",0,70,93,1],[1,"cs",0,87,96,1],[1,"cs",1,76,94,1],[1,"cs",1,79,96,1],[1,"cs",1,77,74,1],[1,"cs",0,80,81,1],[1,"cs",0,80,84,1],[1,"cs",1,80,87,1],[1,"cs",1,85,84,1],[1,"cs",1,85,87,1],[1,"cs",1,75,84,1],[1,"cs",0,75,87,1],[1,"cs",1,27,46,1],[1,"cs",2,25,46,1],[1,"cs",2,26,46,1],[1,"cs",2,27,45,1],[1,"cs",2,26,45,1],[1,"cs",2,25,45,1],[1,"cs",2,19,45,1],[1,"cs",2,20,45,1],[1,"cs",2,19,46,1],[1,"cs",2,20,46,1],[1,"cs",1,18,46,1],[1,"s",2,70,84,1],[1,"s",2,71,84,1],[1,"s",2,72,84,1],[1,"s",2,70,86,1],[1,"s",2,71,86,1],[1,"s",2,72,86,1],[1,"ma",1,70,85,1],[1,"ma",1,72,85,1],[1,"ma",0,28,9,1],[1,"ma",0,29,9,1],[1,"cs",2,0,12,1],[1,"cs",2,1,12,1],[1,"cs",2,2,12,1],[1,"cs",2,4,12,1],[1,"cs",2,5,12,1],[1,"cs",2,6,12,1],[1,"cs",2,7,13,1],[1,"cs",2,5,14,1],[1,"cs",2,4,14,1],[1,"cs",2,1,14,1],[1,"cs",2,3,15,1],[1,"cs",2,4,15,1],[1,"cs",2,6,15,1],[1,"cs",2,7,15,1],[1,"cs",2,7,16,1],[1,"cs",2,6,16,1],[1,"cs",2,5,17,1],[1,"cs",2,4,17,1],[1,"cs",2,3,17,1],[1,"cs",2,1,17,1],[1,"cs",2,0,17,1],[1,"cs",2,0,16,1],[1,"cs",2,0,15,1],[1,"cs",2,0,14,1],[1,"cs",2,1,13,1],[1,"cs",2,0,13,1],[1,"cs",2,1,15,1],[1,"cs",2,1,16,1],[1,"cs",2,4,16,1],[1,"cs",2,5,16,1],[1,"cs",2,7,17,1],[1,"cs",2,6,17,1],[1,"cs",2,3,16,1],[1,"cs",2,7,14,1],[1,"cs",2,7,12,1],[1,"cs",2,5,13,1],[1,"cs",2,3,13,1],[1,"cs",2,3,12,1],[1,"cs",2,2,14,1],[1,"cs",2,3,14,1],[1,"cs",2,6,13,1],[1,"cs",2,2,16,1],[1,"cs",2,2,17,1],[1,"cs",0,5,15,1],[1,"cs",0,2,13,1],[1,"cs",1,6,14,1],[1,"cs",1,4,13,1],[1,"cs",1,2,15,1],[1,"cs",1,3,18,1],[1,"cs",2,44,11,1],[1,"cs",2,43,11,1],[1,"cs",2,43,12,1],[1,"cs",2,44,12,1],[1,"cs",2,43,13,1],[1,"cs",2,49,14,1],[1,"cs",2,50,14,1],[1,"cs",2,51,14,1],[1,"cs",2,52,14,1],[1,"cs",2,53,14,1],[1,"cs",2,54,14,1],[1,"cs",2,55,14,1],[1,"cs",2,55,13,1],[1,"cs",2,54,13,1],[1,"cs",2,53,13,1],[1,"cs",2,52,13,1],[1,"cs",2,51,13,1],[1,"cs",2,50,13,1],[1,"cs",2,50,12,1],[1,"cs",2,49,12,1],[1,"cs",2,49,13,1],[1,"cs",2,52,12,1],[1,"cs",2,53,12,1],[1,"cs",2,54,12,1],[1,"cs",2,55,12,1],[1,"cs",2,54,11,1],[1,"cs",2,53,11,1],[1,"cs",2,52,11,1],[1,"cs",2,51,11,1],[1,"cs",2,50,11,1],[1,"cs",2,49,11,1],[1,"r",41,45,1],[1,"r",42,46,1],[1,"r",42,45,1],[1,"r",41,46,1],[1,"r",41,47,1],[1,"r",42,47,1],[1,"r",41,48,1],[1,"r",42,48,1],[1,"cs",2,92,28,1],[1,"cs",2,99,36,1],[1,"cs",2,99,35,1],[1,"cs",2,99,34,1],[1,"cs",2,99,33,1],[1,"cs",2,99,32,1],[1,"cs",2,99,31,1],[1,"cs",2,99,30,1],[1,"cs",2,99,29,1],[1,"cs",2,99,28,1],[1,"cs",2,92,29,1],[1,"cs",2,92,30,1],[1,"cs",2,93,29,1],[1,"cs",2,93,28,1],[1,"cs",2,93,30,1],[1,"cs",2,93,34,1],[1,"cs",2,93,35,1],[1,"cs",2,92,36,1],[1,"cs",2,92,34,1],[1,"cs",2,92,35,1],[1,"cs",2,98,36,1],[1,"cs",2,98,35,1],[1,"cs",2,98,34,1],[1,"cs",2,98,29,1],[1,"cs",2,98,28,1],[1,"cs",2,95,28,1],[1,"cs",2,95,29,1],[1,"cs",2,95,34,1],[1,"cs",2,95,35,1],[1,"cs",2,95,36,1],[1,"cs",2,96,29,1],[1,"cs",2,96,28,1],[1,"cs",2,97,28,1],[1,"cs",2,97,29,1],[1,"cs",2,97,30,1],[1,"cs",2,96,34,1],[1,"cs",2,96,36,1],[1,"cs",2,97,36,1],[1,"cs",2,97,35,1],[1,"cs",2,97,34,1],[1,"cs",2,94,28,1],[1,"cs",2,94,34,1],[1,"cs",2,94,35,1],[1,"cs",2,94,36,1],[1,"cs",2,46,66,1],[1,"cs",2,46,68,1],[1,"cs",2,46,69,1],[1,"cs",2,46,70,1],[1,"cs",2,46,71,1],[1,"cs",2,46,72,1],[1,"cs",2,46,73,1],[1,"cs",2,58,65,1],[1,"cs",2,58,64,1],[1,"cs",2,58,63,1],[1,"cs",2,58,62,1],[1,"cs",2,46,77,1],[1,"cs",2,46,75,1],[1,"cs",2,46,74,1],[1,"cs",2,46,78,1],[1,"cs",2,46,79,1],[1,"cs",2,46,80,1],[1,"cs",2,46,81,1],[1,"cs",2,46,82,1],[1,"cs",2,49,82,1],[1,"cs",2,48,82,1],[1,"cs",2,51,82,1],[1,"cs",2,52,82,1],[1,"cs",2,53,82,1],[1,"cs",2,54,82,1],[1,"cs",2,55,82,1],[1,"cs",2,57,82,1],[1,"cs",2,58,82,1],[1,"cs",2,45,66,1],[1,"cs",2,45,67,1],[1,"cs",2,45,68,1],[1,"cs",2,45,69,1],[1,"cs",2,45,72,1],[1,"cs",2,45,73,1],[1,"cs",2,45,74,1],[1,"cs",2,45,75,1],[1,"cs",2,45,76,1],[1,"cs",2,45,77,1],[1,"cs",2,45,78,1],[1,"cs",2,45,79,1],[1,"cs",2,45,71,1],[1,"cs",2,45,83,1],[1,"cs",2,46,83,1],[1,"cs",2,47,83,1],[1,"cs",2,48,83,1],[1,"cs",2,49,83,1],[1,"cs",2,50,83,1],[1,"cs",2,51,83,1],[1,"cs",2,52,83,1],[1,"cs",2,53,83,1],[1,"cs",2,54,83,1],[1,"cs",2,55,83,1],[1,"cs",2,56,83,1],[1,"cs",2,57,83,1],[1,"cs",2,58,83,1],[1,"cs",2,58,84,1],[1,"cs",2,57,84,1],[1,"cs",2,56,84,1],[1,"cs",2,55,84,1],[1,"cs",2,54,84,1],[1,"cs",2,52,84,1],[1,"cs",2,51,84,1],[1,"cs",2,50,84,1],[1,"cs",2,49,84,1],[1,"cs",2,45,84,1],[1,"cs",2,47,84,1],[1,"cs",2,48,84,1],[1,"cs",2,59,84,1],[1,"cs",2,60,84,1],[1,"cs",2,60,83,1],[1,"cs",2,60,82,1],[1,"cs",2,60,81,1],[1,"cs",2,60,80,1],[1,"cs",2,60,78,1],[1,"cs",2,60,77,1],[1,"cs",2,60,75,1],[1,"cs",2,60,74,1],[1,"cs",2,60,73,1],[1,"cs",2,60,72,1],[1,"cs",2,60,71,1],[1,"cs",2,60,69,1],[1,"cs",2,60,68,1],[1,"cs",2,60,67,1],[1,"cs",2,60,66,1],[1,"cs",2,60,65,1],[1,"cs",2,60,64,1],[1,"cs",2,60,63,1],[1,"cs",2,60,62,1],[1,"cs",2,59,62,1],[1,"cs",2,59,63,1],[1,"cs",2,59,65,1],[1,"cs",2,59,66,1],[1,"cs",2,59,67,1],[1,"cs",2,59,74,1],[1,"cs",2,59,75,1],[1,"cs",2,59,76,1],[1,"cs",2,59,77,1],[1,"cs",2,59,78,1],[1,"cs",2,59,79,1],[1,"cs",2,59,80,1],[1,"cs",2,59,81,1],[1,"cs",2,59,82,1],[1,"cs",2,59,72,1],[1,"cs",2,59,71,1],[1,"cs",2,59,70,1],[1,"cs",2,59,69,1],[1,"cs",2,59,68,1],[1,"p",0,52,17,1],[1,"plm",0,52,19,0],[1,"cs",2,61,62,1],[1,"cs",2,61,63,1],[1,"cs",2,61,64,1],[1,"cs",2,61,65,1],[1,"cs",2,61,69,1],[1,"cs",2,61,70,1],[1,"cs",2,61,71,1],[1,"cs",2,61,73,1],[1,"cs",2,61,74,1],[1,"cs",2,61,76,1],[1,"cs",2,61,77,1],[1,"cs",2,61,78,1],[1,"cs",2,61,79,1],[1,"cs",2,61,80,1],[1,"cs",2,61,82,1],[1,"cs",2,61,83,1],[1,"cs",2,61,75,1],[1,"cs",2,47,66,1],[1,"cs",2,47,67,1],[1,"cs",2,47,71,1],[1,"cs",2,47,70,1],[1,"cs",2,47,69,1],[1,"cs",2,47,68,1],[1,"cs",2,47,72,1],[1,"cs",2,47,74,1],[1,"cs",2,47,78,1],[1,"cs",2,47,79,1],[1,"cs",2,47,77,1],[1,"cs",2,47,76,1],[1,"cs",2,47,75,1],[1,"cs",2,47,80,1],[1,"cs",2,47,81,1],[1,"cs",2,45,81,1],[1,"cs",2,45,82,1],[1,"d",2,84,93,1],[1,"d",2,88,89,1],[1,"a",1,75,77,1],[1,"a",1,72,79,1],[1,"a",0,74,79,1],[1,"cs",1,43,48,1],[1,"cs",1,93,36,1],[1,"cs",1,91,28,1],[1,"cs",1,94,29,1],[1,"cs",1,96,35,1],[1,"cs",0,98,30,1],[1,"cs",2,98,31,1],[1,"cs",2,98,32,1],[1,"cs",1,98,33,1],[1,"cs",2,94,30,1],[1,"cs",2,95,30,1],[1,"cs",2,96,30,1],[1,"cs",2,89,25,1],[1,"cs",2,90,25,1],[1,"cs",2,79,39,1],[1,"cs",2,80,39,1],[1,"cs",2,81,39,1],[1,"cs",2,82,39,1],[1,"cs",2,84,39,1],[1,"cs",2,83,39,1],[1,"cs",2,85,39,1],[1,"cs",2,89,39,1],[1,"cs",2,88,39,1],[1,"cs",2,78,54,1],[1,"cs",0,51,12,1],[1,"b",0,39,16,0],[1,"s",2,30,44,1],[1,"s",2,30,45,1],[1,"s",2,30,46,1],[1,"s",2,30,47,1],[1,"s",2,30,48,1],[1,"s",2,30,49,1],[1,"s",2,30,50,1],[1,"s",2,30,51,1],[1,"s",2,32,44,1],[1,"s",2,32,45,1],[1,"s",2,32,46,1],[1,"s",2,32,47,1],[1,"s",2,32,48,1],[1,"s",2,32,49,1],[1,"s",2,32,50,1],[1,"s",2,32,51,1],[1,"ma",1,31,51,1],[1,"ma",0,31,45,1],[1,"ma",0,31,46,1],[1,"ma",0,31,47,1],[1,"ma",0,31,48,1],[1,"ma",0,31,49,1],[1,"ma",0,31,50,1],[1,"cs",2,65,45,1],[1,"cs",2,64,45,1],[1,"cs",2,63,45,1],[1,"cs",2,62,45,1],[1,"cs",2,61,45,1],[1,"cs",2,60,45,1],[1,"cs",2,59,45,1],[1,"cs",2,60,44,1],[1,"cs",2,60,43,1],[1,"cs",2,58,43,1],[1,"cs",2,59,43,1],[1,"cs",2,61,42,1],[1,"cs",2,61,43,1],[1,"cs",2,61,44,1],[1,"cs",2,62,44,1],[1,"cs",2,62,43,1],[1,"cs",2,64,44,1],[1,"cs",2,63,43,1],[1,"cs",2,64,43,1],[1,"cs",2,65,44,1],[1,"cs",2,65,43,1],[1,"cs",2,65,42,1],[1,"cs",2,67,43,1],[1,"cs",2,66,43,1],[1,"cs",2,60,46,1],[1,"cs",2,58,46,1],[1,"cs",2,60,47,1],[1,"cs",2,60,48,1],[1,"cs",2,60,49,1],[1,"cs",2,60,50,1],[1,"cs",2,61,52,1],[1,"cs",2,61,51,1],[1,"cs",2,60,51,1],[1,"cs",2,62,52,1],[1,"cs",2,63,52,1],[1,"cs",2,64,51,1],[1,"cs",2,63,51,1],[1,"cs",2,67,51,1],[1,"cs",2,69,51,1],[1,"cs",2,56,47,1],[1,"cs",2,57,47,1],[1,"cs",2,57,48,1],[1,"cs",1,76,51,1],[1,"cs",1,71,50,1],[1,"cs",1,63,44,1],[1,"cs",2,61,68,1],[1,"cs",2,61,66,1],[1,"cs",1,59,64,1],[1,"cs",1,46,67,1],[1,"cs",1,60,70,1],[1,"cs",1,47,73,1],[1,"cs",1,50,82,1],[1,"cs",1,45,70,1],[1,"cs",1,45,80,1],[1,"cs",1,46,84,1],[1,"cs",1,56,82,1],[1,"cs",1,59,83,1],[1,"cs",1,61,84,1],[1,"cs",1,60,79,1],[1,"cs",1,59,73,1],[1,"cs",0,61,67,1],[1,"cs",0,46,76,1],[1,"cs",0,47,82,1],[1,"cs",0,53,84,1],[1,"cs",0,61,81,1],[1,"cs",0,60,76,1],[1,"m",2,3,21,1],[1,"re",2,3,19,1],[1,"ma",3,4,21,1],[1,"ma",3,4,19,1],[1,"ma",1,5,21,1],[1,"ma",1,5,19,1],[1,"ma",2,8,18,1],[1,"cs",3,89,26,1],[1,"cs",3,87,26,1],[1,"cs",3,85,26,1],[1,"cs",3,86,26,1],[1,"cs",3,61,24,1],[1,"cs",3,61,23,1],[1,"cs",3,63,23,1],[1,"cs",3,64,23,1],[1,"cs",3,62,23,1],[1,"cs",3,65,23,1],[1,"cs",3,66,23,1],[1,"cs",3,67,23,1],[1,"cs",3,75,23,1],[1,"cs",3,76,23,1],[1,"cs",3,77,23,1],[1,"cs",3,78,23,1],[1,"cs",3,83,24,1],[1,"cs",3,84,24,1],[1,"cs",3,85,24,1],[1,"cs",3,86,24,1],[1,"cs",3,87,24,1],[1,"cs",3,88,24,1],[1,"cs",3,89,24,1],[1,"cs",3,90,24,1],[1,"cs",3,80,23,1],[1,"cs",3,82,23,1],[1,"cs",3,83,23,1],[1,"cs",3,81,23,1],[1,"cs",3,85,23,1],[1,"cs",3,84,23,1],[1,"cs",3,88,23,1],[1,"cs",3,89,23,1],[1,"cs",3,87,23,1],[1,"cs",3,90,23,1],[1,"cs",3,85,28,1],[1,"cs",3,56,38,1],[1,"cs",3,56,37,1],[1,"cs",3,84,38,1],[1,"cs",3,56,26,1],[1,"cs",3,57,26,1],[1,"cs",3,58,26,1],[1,"cs",3,59,26,1],[1,"cs",3,61,26,1],[1,"cs",3,64,26,1],[1,"cs",3,60,26,1],[1,"cs",3,66,26,1],[1,"cs",3,65,26,1],[1,"cs",3,67,26,1],[1,"cs",3,77,26,1],[1,"cs",3,79,26,1],[1,"cs",3,76,26,1],[1,"cs",3,78,26,1],[1,"cs",3,80,26,1],[1,"cs",3,82,26,1],[1,"cs",3,83,26,1],[1,"cs",3,84,26,1],[1,"cs",3,81,26,1],[1,"cs",3,79,34,1],[1,"cs",3,56,34,1],[1,"cs",3,56,35,1],[1,"cs",3,56,36,1],[1,"cs",3,56,27,1],[1,"cs",3,56,28,1],[1,"cs",3,56,29,1],[1,"cs",3,79,29,1],[1,"cs",3,62,40,1],[1,"la",4,85,32,1],[1,"cs",3,44,13,1],[1,"cs",3,79,40,1],[1,"cs",3,80,40,1],[1,"cs",3,81,40,1],[1,"cs",3,82,40,1],[1,"cs",3,83,40,1],[1,"cs",3,87,40,1],[1,"cs",3,85,40,1],[1,"cs",3,84,40,1],[1,"cs",3,86,40,1],[1,"cs",3,88,40,1],[1,"cs",3,89,40,1],[1,"cs",3,59,54,1],[1,"cs",3,53,26,1],[1,"cs",3,54,26,1],[1,"cs",3,55,26,1],[1,"cs",3,56,25,1],[1,"cs",3,57,25,1],[1,"cs",0,68,23,1],[1,"cs",1,86,23,1],[1,"cs",1,79,23,1],[1,"cs",1,68,26,1],[1,"cs",1,86,39,1],[1,"cs",0,88,26,1],[1,"cs",3,80,74,1],[1,"cs",3,80,75,1],[1,"cs",3,80,76,1],[1,"cs",3,79,76,1],[1,"cs",3,79,75,1],[1,"cs",3,79,74,1],[1,"cs",3,81,74,1],[1,"cs",3,81,75,1],[1,"cs",3,81,76,1],[1,"cs",3,52,45,1],[1,"cs",3,51,45,1],[1,"cs",3,52,44,1],[1,"cs",3,52,46,1],[1,"cs",3,53,45,1],[1,"cs",3,53,46,1],[1,"cs",3,53,47,1],[1,"cs",3,54,46,1],[1,"cs",3,54,47,1],[1,"cs",3,54,48,1],[1,"cs",3,55,48,1],[1,"cs",3,55,47,1],[1,"cs",3,55,49,1],[1,"cs",3,56,48,1],[1,"cs",3,56,49,1],[1,"cs",3,56,50,1],[1,"cs",3,57,50,1],[1,"cs",3,57,49,1],[1,"cs",3,57,51,1],[1,"cs",3,58,51,1],[1,"cs",3,58,50,1],[1,"cs",3,58,52,1],[1,"cs",3,59,52,1],[1,"cs",3,59,51,1],[1,"cs",3,59,53,1],[1,"cs",3,60,54,1],[1,"cs",3,60,53,1],[1,"cs",3,60,52,1],[1,"cs",3,61,53,1],[1,"cs",3,61,54,1],[1,"cs",3,61,55,1],[1,"cs",3,62,54,1],[1,"cs",3,82,75,1],[1,"cs",3,82,74,1],[1,"cs",3,11,27,1],[1,"cs",3,12,27,1],[1,"cs",3,13,27,1],[1,"cs",3,14,27,1],[1,"cs",3,14,28,1],[1,"cs",3,14,29,1],[1,"cs",3,14,30,1],[1,"cs",3,14,32,1],[1,"cs",3,14,33,1],[1,"cs",3,14,34,1],[1,"cs",3,14,35,1],[1,"cs",3,14,36,1],[1,"cs",3,13,36,1],[1,"cs",3,12,36,1],[1,"cs",3,11,36,1],[1,"cs",3,9,36,1],[1,"cs",3,8,36,1],[1,"cs",3,7,36,1],[1,"cs",3,6,36,1],[1,"cs",3,5,36,1],[1,"cs",3,4,27,1],[1,"cs",3,5,27,1],[1,"cs",3,6,27,1],[1,"cs",3,9,27,1],[1,"cs",3,10,27,1],[1,"cs",3,8,27,1],[1,"cs",3,0,25,1],[1,"cs",3,0,26,1],[1,"cs",3,0,27,1],[1,"cs",3,0,28,1],[1,"cs",3,0,30,1],[1,"cs",3,0,31,1],[1,"cs",3,0,33,1],[1,"cs",3,0,34,1],[1,"cs",3,0,35,1],[1,"cs",3,0,37,1],[1,"cs",3,0,38,1],[1,"cs",1,0,29,1],[1,"cs",1,0,32,1],[1,"cs",1,0,36,1],[1,"cs",1,7,27,1],[1,"cs",1,4,36,1],[1,"cs",1,10,36,1],[1,"cs",1,14,31,1],[1,"ma",0,13,28,1],[1,"ma",0,13,35,1],[1,"cs",3,16,14,1],[1,"cs",3,16,13,1],[1,"cs",3,17,13,1],[1,"cs",3,17,14,1],[1,"cs",3,17,15,1],[1,"cs",3,16,15,1],[1,"cs",3,44,14,1],[1,"cs",3,44,15,1],[1,"cs",0,43,14,1],[1,"cs",3,47,45,1],[1,"cs",3,48,45,1],[1,"cs",3,49,45,1],[1,"cs",3,48,46,1],[1,"cs",3,47,46,1],[1,"cs",3,49,46,1],[1,"cs",3,4,95,1],[1,"cs",3,5,95,1],[1,"cs",3,6,95,1],[1,"cs",3,4,93,1],[1,"cs",3,4,92,1],[1,"cs",3,4,91,1],[1,"cs",3,4,90,1],[1,"cs",3,4,89,1],[1,"cs",3,4,88,1],[1,"cs",3,4,87,1],[1,"cs",3,4,86,1],[1,"cs",3,4,85,1],[1,"cs",3,4,84,1],[1,"cs",3,4,83,1],[1,"cs",3,4,82,1],[1,"cs",3,4,81,1],[1,"cs",3,4,80,1],[1,"cs",3,4,79,1],[1,"cs",3,7,95,1],[1,"cs",3,9,95,1],[1,"cs",3,10,95,1],[1,"cs",3,11,95,1],[1,"cs",3,12,95,1],[1,"cs",3,14,95,1],[1,"cs",3,15,95,1],[1,"cs",3,16,95,1],[1,"cs",3,17,95,1],[1,"cs",3,18,95,1],[1,"cs",3,13,95,1],[1,"cs",3,19,95,1],[1,"cs",3,20,95,1],[1,"cs",3,21,95,1],[1,"cs",3,4,78,1],[1,"cs",3,4,77,1],[1,"cs",3,4,76,1],[1,"cs",3,4,75,1],[1,"cs",3,23,95,1],[1,"cs",3,24,95,1],[1,"cs",3,25,95,1],[1,"cs",3,26,95,1],[1,"cs",3,27,95,1],[1,"cs",3,28,95,1],[1,"cs",3,29,95,1],[1,"cs",3,31,95,1],[1,"cs",3,32,95,1],[1,"cs",3,33,95,1],[1,"cs",3,30,95,1],[1,"cs",3,34,95,1],[1,"cs",3,35,95,1],[1,"cs",3,36,95,1],[1,"cs",3,37,95,1],[1,"cs",3,38,95,1],[1,"cs",3,39,95,1],[1,"cs",3,16,62,1],[1,"cs",3,15,62,1],[1,"cs",3,14,62,1],[1,"cs",3,13,62,1],[1,"cs",3,13,63,1],[1,"cs",3,13,64,1],[1,"cs",3,13,65,1],[1,"cs",3,14,65,1],[1,"cs",3,15,65,1],[1,"cs",3,16,65,1],[1,"cs",3,16,64,1],[1,"cs",3,16,63,1],[1,"cs",3,14,63,1],[1,"cs",3,14,64,1],[1,"cs",3,15,64,1],[1,"cs",0,15,63,1],[1,"cs",3,28,56,1],[1,"cs",3,28,57,1],[1,"cs",3,28,58,1],[1,"cs",3,28,59,1],[1,"cs",3,28,60,1],[1,"cs",3,28,61,1],[1,"cs",3,28,62,1],[1,"cs",3,28,63,1],[1,"cs",3,28,64,1],[1,"cs",3,28,65,1],[1,"cs",3,29,65,1],[1,"cs",3,30,65,1],[1,"cs",3,35,65,1],[1,"cs",3,36,65,1],[1,"cs",3,37,65,1],[1,"cs",3,38,65,1],[1,"cs",3,39,65,1],[1,"cs",3,40,65,1],[1,"cs",3,41,65,1],[1,"cs",3,42,65,1],[1,"cs",3,43,65,1],[1,"cs",3,44,65,1],[1,"cs",3,44,64,1],[1,"cs",3,44,63,1],[1,"cs",3,44,62,1],[1,"cs",3,44,61,1],[1,"cs",3,44,60,1],[1,"cs",3,44,59,1],[1,"cs",3,44,58,1],[1,"cs",3,44,57,1],[1,"cs",3,43,57,1],[1,"cs",3,42,57,1],[1,"cs",3,41,57,1],[1,"cs",3,40,57,1],[1,"cs",3,39,57,1],[1,"cs",3,38,57,1],[1,"cs",3,37,57,1],[1,"cs",3,36,57,1],[1,"cs",3,35,57,1],[1,"cs",3,34,57,1],[1,"cs",3,33,57,1],[1,"cs",3,29,57,1],[1,"cs",3,29,58,1],[1,"cs",3,29,59,1],[1,"cs",3,29,60,1],[1,"cs",3,29,61,1],[1,"cs",3,30,61,1],[1,"cs",3,31,61,1],[1,"cs",3,31,62,1],[1,"cs",3,30,62,1],[1,"cs",3,29,62,1],[1,"cs",3,30,63,1],[1,"cs",3,31,63,1],[1,"cs",3,31,64,1],[1,"cs",3,30,64,1],[1,"cs",3,29,63,1],[1,"cs",3,35,64,1],[1,"cs",3,36,64,1],[1,"cs",3,38,64,1],[1,"cs",3,39,64,1],[1,"cs",3,40,64,1],[1,"cs",3,41,64,1],[1,"cs",3,42,64,1],[1,"cs",3,43,64,1],[1,"cs",3,43,63,1],[1,"cs",3,42,63,1],[1,"cs",3,40,63,1],[1,"cs",3,39,63,1],[1,"cs",3,38,63,1],[1,"cs",3,37,63,1],[1,"cs",3,35,63,1],[1,"cs",3,36,63,1],[1,"cs",3,35,62,1],[1,"cs",3,36,62,1],[1,"cs",3,37,62,1],[1,"cs",3,38,62,1],[1,"cs",3,39,62,1],[1,"cs",3,40,62,1],[1,"cs",3,41,62,1],[1,"cs",3,42,62,1],[1,"cs",3,43,62,1],[1,"cs",3,42,61,1],[1,"cs",3,41,61,1],[1,"cs",3,40,61,1],[1,"cs",3,39,61,1],[1,"cs",3,38,61,1],[1,"cs",3,37,61,1],[1,"cs",3,36,61,1],[1,"cs",3,35,61,1],[1,"cs",3,35,59,1],[1,"cs",3,36,59,1],[1,"cs",3,37,59,1],[1,"cs",3,38,59,1],[1,"cs",3,39,59,1],[1,"cs",3,41,59,1],[1,"cs",3,42,59,1],[1,"cs",3,43,59,1],[1,"cs",3,42,58,1],[1,"cs",3,41,58,1],[1,"cs",3,40,58,1],[1,"cs",3,38,58,1],[1,"cs",3,37,58,1],[1,"cs",3,36,58,1],[1,"cs",3,35,58,1],[1,"cs",3,43,58,1],[1,"cs",3,39,58,1],[1,"cs",3,40,60,1],[1,"cs",3,41,60,1],[1,"cs",3,43,61,1],[1,"cs",3,43,60,1],[1,"cs",3,42,60,1],[1,"cs",3,40,59,1],[1,"cs",3,38,60,1],[1,"cs",3,37,60,1],[1,"cs",3,36,60,1],[1,"cs",3,35,60,1],[1,"cs",3,5,74,1],[1,"cs",3,6,76,1],[1,"cs",3,5,76,1],[1,"cs",3,5,75,1],[1,"cs",3,5,77,1],[1,"cs",3,5,78,1],[1,"cs",3,5,79,1],[1,"cs",3,6,78,1],[1,"cs",3,5,80,1],[1,"cs",3,5,81,1],[1,"cs",3,6,80,1],[1,"cs",3,6,79,1],[1,"cs",3,5,82,1],[1,"cs",3,6,81,1],[1,"cs",3,5,84,1],[1,"cs",3,6,83,1],[1,"cs",3,6,82,1],[1,"cs",3,6,84,1],[1,"cs",3,6,85,1],[1,"cs",3,5,85,1],[1,"cs",3,5,86,1],[1,"cs",3,6,86,1],[1,"cs",3,6,87,1],[1,"cs",3,5,87,1],[1,"cs",3,5,88,1],[1,"cs",3,5,89,1],[1,"cs",3,5,90,1],[1,"cs",3,5,91,1],[1,"cs",3,6,90,1],[1,"cs",3,6,88,1],[1,"cs",3,5,92,1],[1,"cs",3,6,91,1],[1,"cs",3,6,92,1],[1,"cs",3,5,93,1],[1,"cs",3,5,94,1],[1,"cs",3,6,94,1],[1,"cs",3,6,93,1],[1,"cs",3,7,93,1],[1,"cs",3,8,93,1],[1,"cs",3,9,93,1],[1,"cs",3,10,93,1],[1,"cs",3,11,93,1],[1,"cs",3,12,93,1],[1,"cs",3,13,93,1],[1,"cs",3,14,93,1],[1,"cs",3,15,93,1],[1,"cs",3,16,93,1],[1,"cs",3,17,93,1],[1,"cs",3,18,93,1],[1,"cs",3,19,93,1],[1,"cs",3,20,93,1],[1,"cs",3,21,93,1],[1,"cs",3,22,93,1],[1,"cs",3,23,93,1],[1,"cs",3,24,93,1],[1,"cs",3,25,93,1],[1,"cs",3,26,93,1],[1,"cs",3,27,93,1],[1,"cs",3,29,93,1],[1,"cs",3,30,93,1],[1,"cs",3,31,93,1],[1,"cs",3,32,93,1],[1,"cs",3,33,93,1],[1,"cs",3,34,93,1],[1,"cs",3,35,93,1],[1,"cs",3,35,94,1],[1,"cs",3,34,94,1],[1,"cs",3,33,94,1],[1,"cs",3,32,94,1],[1,"cs",3,27,94,1],[1,"cs",3,26,94,1],[1,"cs",3,25,94,1],[1,"cs",3,24,94,1],[1,"cs",3,23,94,1],[1,"cs",3,22,94,1],[1,"cs",3,21,94,1],[1,"cs",3,20,94,1],[1,"cs",3,19,94,1],[1,"cs",3,18,94,1],[1,"cs",3,16,94,1],[1,"cs",3,14,94,1],[1,"cs",3,13,94,1],[1,"cs",3,12,94,1],[1,"cs",3,11,94,1],[1,"cs",3,10,94,1],[1,"cs",3,8,94,1],[1,"cs",3,7,94,1],[1,"cs",3,28,94,1],[1,"cs",3,29,94,1],[1,"cs",3,30,94,1],[1,"cs",3,31,94,1],[1,"cs",3,17,94,1],[1,"cs",3,9,94,1],[1,"cs",3,37,93,1],[1,"cs",3,38,94,1],[1,"cs",3,39,94,1],[1,"cs",3,39,93,1],[1,"cs",3,37,94,1],[1,"cs",3,36,93,1],[1,"cs",3,38,93,1],[1,"cs",0,5,83,1],[1,"cs",0,8,95,1],[1,"cs",0,22,95,1],[1,"cs",0,36,94,1],[1,"cs",1,6,77,1],[1,"cs",1,6,89,1],[1,"cs",1,15,94,1],[1,"cs",1,4,94,1],[1,"cs",1,28,93,1],[1,"cs",1,4,74,1],[1,"cs",3,39,92,1],[1,"cs",3,38,92,1],[1,"cs",3,37,92,1],[1,"cs",3,37,91,1],[1,"cs",3,37,90,1],[1,"cs",3,37,89,1],[1,"cs",3,37,88,1],[1,"cs",3,37,87,1],[1,"cs",3,37,86,1],[1,"cs",3,37,85,1],[1,"cs",3,37,83,1],[1,"cs",3,37,81,1],[1,"cs",3,37,80,1],[1,"cs",3,37,79,1],[1,"cs",3,37,77,1],[1,"cs",3,37,76,1],[1,"cs",3,38,74,1],[1,"cs",3,39,74,1],[1,"cs",3,39,75,1],[1,"cs",3,39,76,1],[1,"cs",3,39,77,1],[1,"cs",3,39,78,1],[1,"cs",3,39,79,1],[1,"cs",3,39,80,1],[1,"cs",3,39,81,1],[1,"cs",3,39,82,1],[1,"cs",3,39,84,1],[1,"cs",3,39,85,1],[1,"cs",3,39,86,1],[1,"cs",3,39,87,1],[1,"cs",3,39,88,1],[1,"cs",3,39,89,1],[1,"cs",3,39,90,1],[1,"cs",3,38,91,1],[1,"cs",3,38,90,1],[1,"cs",3,38,89,1],[1,"cs",3,38,88,1],[1,"cs",3,38,87,1],[1,"cs",3,38,84,1],[1,"cs",3,38,83,1],[1,"cs",3,38,82,1],[1,"cs",3,38,80,1],[1,"cs",3,38,79,1],[1,"cs",3,38,78,1],[1,"cs",3,38,77,1],[1,"cs",3,38,81,1],[1,"cs",3,37,82,1],[1,"cs",3,38,85,1],[1,"cs",3,37,84,1],[1,"cs",3,38,76,1],[1,"cs",0,38,75,1],[1,"cs",0,39,83,1],[1,"cs",1,38,86,1],[1,"cs",1,37,78,1],[1,"cs",0,39,91,1],[1,"r",28,82,0],[1,"r",29,82,0],[1,"r",30,82,0],[1,"r",31,82,0],[1,"r",31,83,0],[1,"r",31,84,0],[1,"r",30,84,0],[1,"r",29,84,0],[1,"r",28,84,0],[1,"r",28,83,0],[1,"r",29,83,0],[1,"r",30,83,0],[1,"r",10,87,0],[1,"r",11,87,0],[1,"r",12,87,0],[1,"r",13,87,0],[1,"r",13,88,0],[1,"r",12,88,0],[1,"r",11,88,0],[1,"r",10,88,0],[1,"r",10,89,0],[1,"r",11,89,0],[1,"r",13,89,0],[1,"r",12,89,0],[1,"t",1,29,87,0],[1,"t",1,29,88,0],[1,"t",1,24,83,0],[1,"t",1,23,83,0],[1,"t",1,10,81,0],[1,"t",1,10,82,0],[1,"t",1,17,89,0],[1,"t",1,18,89,0],[1,"s",0,10,81,1],[1,"s",0,10,82,1],[1,"s",0,17,89,1],[1,"s",0,18,89,1],[1,"s",0,23,83,1],[1,"s",0,24,83,1],[1,"s",0,29,87,1],[1,"s",0,29,88,1],[1,"g",0,10,81,1],[1,"g",0,10,82,1],[1,"g",0,17,89,1],[1,"g",0,18,89,1],[1,"g",0,23,83,1],[1,"g",0,24,83,1],[1,"g",0,29,87,1],[1,"g",0,29,88,1],[1,"d",0,10,81,1],[1,"d",0,10,82,1],[1,"d",0,17,89,1],[1,"d",0,18,89,1],[1,"d",0,23,83,1],[1,"d",0,24,83,1],[1,"d",0,29,87,1],[1,"d",0,29,88,1],[1,"a",0,10,81,1],[1,"a",0,10,82,1],[1,"a",0,17,89,1],[1,"a",0,18,89,1],[1,"a",0,23,83,1],[1,"a",0,24,83,1],[1,"a",0,29,87,1],[1,"a",0,29,88,1],[1,"re",2,10,81,1],[1,"re",2,10,82,1],[1,"re",2,17,89,1],[1,"re",2,18,89,1],[1,"re",2,23,83,1],[1,"re",2,29,87,1],[1,"re",2,29,88,1],[1,"re",2,24,83,1],[1,"plm",2,13,86,0],[1,"plm",2,14,87,0],[1,"plm",2,9,89,0],[1,"plm",2,31,81,0],[1,"plm",2,32,82,0],[1,"plm",2,27,85,0],[1,"c",0,23,88,1],[1,"c",0,18,85,1],[1,"c",0,33,90,1],[1,"c",0,9,85,1],[1,"c",0,15,79,1],[1,"c",0,26,80,1],[1,"ma",0,21,45,1],[1,"ma",0,22,45,1],[1,"ma",0,23,45,1],[1,"ma",0,23,46,1],[1,"ma",0,22,46,1],[1,"ma",0,21,46,1],[1,"ma",0,21,47,1],[1,"ma",0,22,47,1],[1,"ma",0,23,47,1],[1,"ma",0,23,48,1],[1,"ma",0,22,48,1],[1,"ma",0,21,48,1],[1,"ma",0,21,49,1],[1,"ma",0,22,49,1],[1,"ma",0,23,49,1],[1,"ma",0,23,50,1],[1,"ma",0,23,51,1],[1,"ma",0,23,52,1],[1,"ma",0,23,53,1],[1,"ma",0,23,54,1],[1,"ma",0,23,55,1],[1,"ma",0,23,56,1],[1,"ma",0,22,56,1],[1,"ma",0,21,56,1],[1,"ma",0,21,55,1],[1,"ma",0,21,54,1],[1,"ma",0,21,53,1],[1,"ma",0,21,52,1],[1,"ma",0,21,51,1],[1,"ma",0,21,50,1],[1,"ma",0,22,50,1],[1,"ma",0,22,51,1],[1,"ma",0,22,52,1],[1,"ma",0,22,53,1],[1,"ma",0,22,54,1],[1,"ma",0,22,55,1],[1,"cs",1,34,58,1],[1,"cs",1,41,63,1],[1,"cs",1,39,60,1],[1,"cs",1,29,64,1],[1,"cs",0,37,64,1],[1,"cs",3,55,11,1],[1,"cs",3,17,57,1],[1,"cs",3,17,58,1],[1,"cs",3,17,60,1],[1,"cs",3,17,59,1],[1,"cs",3,17,61,1],[1,"cs",3,17,62,1],[1,"cs",3,17,63,1],[1,"cs",3,17,64,1],[1,"cs",3,17,65,1],[1,"cs",3,27,57,1],[1,"cs",3,27,58,1],[1,"cs",3,27,59,1],[1,"cs",3,27,60,1],[1,"cs",3,27,61,1],[1,"cs",3,27,62,1],[1,"cs",3,27,63,1],[1,"cs",3,27,64,1],[1,"cs",3,27,65,1],[1,"ma",1,96,32,1],[1,"ma",2,92,32,1],[1,"ma",0,93,32,1],[1,"ma",0,94,32,1],[1,"ma",0,95,32,1],[1,"cs",3,38,73,1],[1,"cs",3,39,73,1],[1,"cs",3,5,73,1],[1,"cs",3,4,73,1],[1,"cs",3,61,72,1],[1,"ma",1,61,17,1],[1,"plm",2,59,18,0],[1,"plm",2,59,17,0],[1,"plm",2,59,16,0],[1,"plm",2,59,15,0],[1,"plm",2,59,14,0],[1,"plm",2,59,13,0],[1,"plm",2,59,12,0],[1,"plm",2,59,11,0],[1,"plm",2,59,10,0],[1,"plm",2,60,10,0],[1,"plm",2,62,10,0],[1,"plm",2,63,10,0],[1,"plm",2,64,10,0],[1,"plm",2,65,10,0],[1,"plm",2,66,10,0],[1,"plm",2,67,10,0],[1,"plm",2,68,10,0],[1,"plm",2,68,11,0],[1,"plm",2,68,12,0],[1,"plm",2,68,14,0],[1,"plm",2,68,15,0],[1,"plm",2,68,13,0],[1,"plm",2,68,18,0],[1,"plm",2,68,19,0],[1,"plm",2,67,19,0],[1,"plm",2,66,19,0],[1,"plm",2,65,19,0],[1,"plm",2,64,19,0],[1,"plm",2,63,19,0],[1,"plm",2,62,19,0],[1,"plm",2,61,19,0],[1,"plm",2,60,19,0],[1,"plm",2,59,19,0],[1,"plm",2,68,16,0],[1,"plm",2,68,17,0],[1,"la",1,64,14,1],[1,"la",1,64,15,1],[1,"la",1,64,13,1],[1,"la",1,65,14,1],[1,"la",1,63,15,1],[1,"la",1,65,12,1],[1,"la",1,66,12,1],[1,"la",1,66,14,1],[1,"la",1,66,15,1],[1,"la",1,66,16,1],[1,"la",1,66,17,1],[1,"la",1,65,17,1],[1,"la",1,64,17,1],[1,"la",1,63,17,1],[1,"la",1,62,17,1],[1,"la",1,61,17,1],[1,"la",1,61,16,1],[1,"la",1,61,15,1],[1,"la",1,61,14,1],[1,"la",1,61,13,1],[1,"la",1,61,12,1],[1,"la",1,62,12,1],[1,"la",1,63,12,1],[1,"la",1,64,12,1],[1,"t",0,63,15,0],[1,"t",0,64,15,0],[1,"t",0,63,14,0],[1,"la",1,62,13,1],[1,"la",1,63,13,1],[1,"la",1,62,14,1],[1,"la",1,63,14,1],[1,"la",1,62,15,1],[1,"la",1,62,16,1],[1,"la",1,63,16,1],[1,"la",1,64,16,1],[1,"la",1,65,15,1],[1,"la",1,65,16,1],[1,"cs",1,13,40,1],[1,"cs",0,13,42,1],[1,"cs",3,12,41,1],[1,"cs",0,14,15,1],[1,"cs",0,14,20,1],[1,"cs",0,14,24,1],[1,"cs",0,12,20,1],[1,"cs",1,14,22,1],[1,"cs",2,14,23,1],[1,"cs",2,14,21,1],[1,"cs",2,13,21,1],[1,"cs",2,13,20,1],[1,"cs",2,13,19,1],[1,"cs",2,14,16,1],[1,"cs",2,13,16,1],[1,"cs",0,14,39,1],[1,"cs",0,14,47,1],[1,"cs",0,14,44,1],[1,"cs",1,14,49,1],[1,"cs",2,14,52,1],[1,"cs",2,14,51,1],[1,"cs",2,14,50,1],[1,"cs",2,14,48,1],[1,"cs",2,14,46,1],[1,"cs",2,14,45,1],[1,"cs",2,14,43,1],[1,"plm",1,14,40,0],[1,"plm",1,13,41,0],[1,"plm",1,14,42,0],[1,"plm",1,14,17,0],[1,"plm",1,13,18,0],[1,"plm",1,14,19,0],[1,"ma",1,14,41,1],[1,"ma",1,14,18,1],[1,"cs",2,32,9,1],[1,"cs",2,33,9,1],[1,"cs",2,33,10,1],[1,"cs",2,32,10,1],[1,"cs",2,30,10,1],[1,"cs",2,30,9,1],[1,"cs",1,31,10,1],[1,"m",2,31,9,1],[1,"cs",2,31,9,1],[1,"m",2,31,6,1],[1,"m",2,34,6,1],[1,"cs",2,31,6,1],[1,"ma",1,33,7,1],[1,"ma",1,33,8,1],[1,"cs",2,62,38,1],[1,"cs",2,62,39,1],[1,"cs",2,63,38,1],[1,"cs",2,63,39,1],[1,"cs",2,64,38,1],[1,"cs",2,64,39,1],[1,"cs",2,65,38,1],[1,"cs",2,65,39,1],[1,"cs",2,66,38,1],[1,"cs",2,66,39,1],[1,"cs",2,67,38,1],[1,"cs",2,67,39,1],[1,"cs",2,68,39,1],[1,"cs",2,68,38,1],[1,"cs",2,80,28,1],[1,"cs",2,81,28,1],[1,"cs",2,79,30,1],[1,"cs",1,81,27,1],[1,"cs",0,80,29,1],[1,"cs",2,79,35,1],[1,"cs",2,80,36,1],[1,"cs",0,80,35,1],[1,"cs",2,81,36,1],[1,"cs",1,81,37,1],[1,"cs",2,82,37,1],[1,"cs",2,62,24,1],[1,"cs",2,62,25,1],[1,"cs",2,63,24,1],[1,"cs",2,63,25,1],[1,"cs",2,63,26,1],[1,"cs",2,62,26,1],[1,"cs",2,64,24,1],[1,"cs",2,64,25,1],[1,"cs",2,65,24,1],[1,"cs",2,65,25,1],[1,"cs",2,66,24,1],[1,"cs",2,66,25,1],[1,"cs",2,67,24,1],[1,"cs",2,67,25,1],[1,"cs",2,68,24,1],[1,"cs",2,68,25,1],[1,"cs",2,76,24,1],[1,"cs",2,76,25,1],[1,"cs",2,77,24,1],[1,"cs",2,77,25,1],[1,"cs",2,78,25,1],[1,"cs",2,78,24,1],[1,"cs",2,79,24,1],[1,"cs",2,79,25,1],[1,"cs",2,80,24,1],[1,"cs",2,80,25,1],[1,"cs",2,81,25,1],[1,"cs",2,82,24,1],[1,"cs",2,81,24,1],[1,"cs",2,82,25,1],[1,"s",2,47,16,1],[1,"s",2,45,16,1],[1,"s",2,45,15,1],[1,"s",2,45,14,1],[1,"s",2,45,13,1],[1,"s",2,45,12,1],[1,"s",2,45,11,1],[1,"s",2,47,11,1],[1,"s",2,47,12,1],[1,"s",2,47,13,1],[1,"s",2,47,14,1],[1,"s",2,47,15,1],[1,"s",2,45,10,1],[1,"s",2,44,10,1],[1,"s",2,43,10,1],[1,"s",2,42,10,1],[1,"s",2,41,10,1],[1,"s",2,40,10,1],[1,"s",2,39,10,1],[1,"s",2,47,10,1],[1,"s",2,48,10,1],[1,"s",2,49,10,1],[1,"s",2,50,10,1],[1,"s",2,51,10,1],[1,"s",2,52,10,1],[1,"s",2,53,10,1],[1,"s",2,39,9,1],[1,"s",2,39,8,1],[1,"s",2,39,7,1],[1,"s",2,39,6,1],[1,"s",2,39,5,1],[1,"s",2,39,4,1],[1,"s",2,39,3,1],[1,"s",2,39,2,1],[1,"plm",0,39,1,0],[1,"s",0,40,1,1],[1,"plm",0,41,1,0],[1,"g",0,42,1,1],[1,"plm",0,43,1,0],[1,"d",0,44,1,1],[1,"plm",0,45,1,0],[1,"a",0,46,1,1],[1,"plm",0,47,1,0],[1,"re",2,48,1,1],[1,"plm",0,49,1,0],[1,"m",2,50,1,1],[1,"plm",0,51,1,0],[1,"plm",0,53,1,0],[1,"s",2,53,2,1],[1,"s",2,53,3,1],[1,"s",2,53,4,1],[1,"s",2,53,5,1],[1,"s",2,53,6,1],[1,"s",2,53,7,1],[1,"s",2,53,8,1],[1,"s",2,53,9,1],[1,"s",2,51,2,1],[1,"s",2,51,3,1],[1,"s",2,51,4,1],[1,"s",2,51,5,1],[1,"s",2,49,2,1],[1,"s",2,49,3,1],[1,"s",2,49,4,1],[1,"s",2,49,5,1],[1,"s",2,49,6,1],[1,"s",2,47,7,1],[1,"s",2,47,6,1],[1,"s",2,47,5,1],[1,"s",2,47,4,1],[1,"s",2,47,3,1],[1,"s",2,47,2,1],[1,"s",2,45,2,1],[1,"s",2,45,3,1],[1,"s",2,45,4,1],[1,"s",2,45,5,1],[1,"s",2,45,6,1],[1,"s",2,45,7,1],[1,"s",2,43,6,1],[1,"s",2,43,5,1],[1,"s",2,43,4,1],[1,"s",2,43,3,1],[1,"s",2,41,2,1],[1,"s",2,41,3,1],[1,"s",2,41,4,1],[1,"s",2,41,5,1],[1,"cs",2,38,10,1],[1,"cs",2,38,9,1],[1,"cs",2,38,8,1],[1,"cs",2,38,7,1],[1,"cs",2,38,6,1],[1,"cs",2,38,5,1],[1,"cs",2,38,4,1],[1,"cs",2,38,2,1],[1,"cs",2,38,3,1],[1,"cs",2,38,1,1],[1,"cs",2,38,0,1],[1,"cs",2,39,0,1],[1,"cs",2,40,0,1],[1,"cs",2,41,0,1],[1,"cs",2,42,0,1],[1,"cs",2,43,0,1],[1,"cs",2,44,0,1],[1,"cs",2,45,0,1],[1,"cs",2,46,0,1],[1,"cs",2,47,0,1],[1,"cs",2,48,0,1],[1,"cs",2,49,0,1],[1,"cs",2,50,0,1],[1,"cs",2,51,0,1],[1,"cs",2,52,0,1],[1,"cs",2,53,0,1],[1,"cs",2,76,59,1],[1,"cs",2,75,59,1],[1,"cs",2,73,59,1],[1,"cs",2,74,59,1],[1,"cs",2,72,59,1],[1,"cs",2,71,59,1],[1,"cs",2,70,59,1],[1,"cs",2,68,59,1],[1,"cs",2,69,59,1],[1,"cs",2,66,59,1],[1,"cs",0,76,60,1],[1,"cs",2,75,60,1],[1,"cs",2,73,60,1],[1,"cs",2,74,60,1],[1,"cs",2,71,60,1],[1,"cs",2,72,60,1],[1,"cs",2,70,60,1],[1,"cs",2,69,60,1],[1,"cs",2,68,60,1],[1,"cs",2,67,60,1],[1,"cs",2,66,60,1],[1,"cs",2,75,61,1],[1,"cs",2,76,61,1],[1,"cs",2,75,62,1],[1,"cs",2,76,62,1],[1,"cs",1,76,63,1],[1,"cs",2,75,63,1],[1,"s",2,74,62,1],[1,"s",2,74,63,1],[1,"s",2,72,63,1],[1,"s",2,72,64,1],[1,"s",2,74,64,1],[1,"s",2,74,65,1],[1,"s",2,74,66,1],[1,"cs",2,75,64,1],[1,"cs",2,76,64,1],[1,"cs",2,76,65,1],[1,"cs",2,75,66,1],[1,"cs",2,76,66,1],[1,"cs",1,75,65,1],[1,"s",2,74,67,1],[1,"s",2,73,67,1],[1,"s",2,72,67,1],[1,"s",2,72,66,1],[1,"s",2,71,67,1],[1,"cs",2,75,67,1],[1,"cs",2,76,67,1],[1,"cs",2,75,68,1],[1,"cs",2,76,68,1],[1,"cs",2,75,69,1],[1,"cs",2,76,69,1],[1,"cs",2,74,68,1],[1,"cs",2,73,68,1],[1,"cs",2,73,69,1],[1,"cs",2,71,68,1],[1,"cs",2,72,68,1],[1,"cs",2,72,69,1],[1,"cs",2,71,69,1],[1,"s",2,73,61,1],[1,"s",2,71,61,1],[1,"s",2,69,61,1],[1,"s",2,70,67,1],[1,"s",2,70,66,1],[1,"s",2,68,67,1],[1,"s",2,68,66,1],[1,"s",2,68,65,1],[1,"s",2,68,64,1],[1,"s",2,68,63,1],[1,"s",2,68,62,1],[1,"cs",2,66,61,1],[1,"cs",2,67,61,1],[1,"cs",2,66,62,1],[1,"cs",2,67,62,1],[1,"cs",2,66,63,1],[1,"cs",2,67,63,1],[1,"cs",2,66,64,1],[1,"cs",2,67,64,1],[1,"cs",2,67,65,1],[1,"cs",2,66,66,1],[1,"cs",2,67,66,1],[1,"cs",2,67,67,1],[1,"cs",2,66,67,1],[1,"cs",2,66,68,1],[1,"cs",2,67,68,1],[1,"cs",2,67,69,1],[1,"cs",2,66,69,1],[1,"cs",2,68,68,1],[1,"cs",2,68,69,1],[1,"cs",2,69,69,1],[1,"cs",2,70,68,1],[1,"cs",2,70,69,1],[1,"s",2,70,62,1],[1,"s",2,70,63,1],[1,"s",2,70,64,1],[1,"la",4,83,30,1],[1,"la",3,84,34,1],[1,"la",0,84,31,1],[1,"la",3,81,34,1],[1,"la",0,80,30,1],[1,"la",0,82,29,1],[1,"la",3,84,27,1],[1,"la",3,84,29,1],[1,"la",3,83,36,1],[1,"la",3,84,37,1],[1,"la",3,80,27,1],[1,"la",3,80,37,1],[1,"la",3,80,29,1],[1,"la",3,80,35,1],[1,"la",0,53,31,1],[1,"la",0,53,33,1],[1,"la",0,55,31,1],[1,"la",0,55,33,1],[1,"la",0,57,33,1],[1,"la",0,57,31,1],[1,"la",0,57,28,1],[1,"la",0,57,36,1],[1,"la",0,59,36,1],[1,"la",0,59,34,1],[1,"la",0,59,31,1],[1,"la",0,59,28,1],[1,"la",0,61,28,1],[1,"la",0,61,30,1],[1,"la",0,61,32,1],[1,"la",0,61,34,1],[1,"la",0,61,36,1],[1,"la",0,63,36,1],[1,"la",0,63,34,1],[1,"la",0,63,32,1],[1,"la",0,63,30,1],[1,"la",0,63,28,1],[1,"la",0,65,28,1],[1,"la",0,65,30,1],[1,"la",0,65,32,1],[1,"la",0,65,34,1],[1,"la",0,65,36,1],[1,"la",0,67,36,1],[1,"la",0,67,34,1],[1,"la",0,67,32,1],[1,"la",0,67,30,1],[1,"la",0,67,28,1],[1,"cs",2,78,34,1],[1,"cs",2,78,30,1],[1,"la",0,79,32,1],[1,"la",0,69,28,1],[1,"la",0,69,30,1],[1,"la",0,69,32,1],[1,"la",0,71,30,1],[1,"la",0,77,30,1],[1,"la",0,77,28,1],[1,"la",0,75,28,1],[1,"la",0,71,28,1],[1,"la",0,73,28,1],[1,"la",0,71,32,1],[1,"la",0,71,34,1],[1,"la",0,77,32,1],[1,"la",0,77,34,1],[1,"la",0,77,36,1],[1,"la",0,75,36,1],[1,"la",0,73,36,1],[1,"la",0,71,36,1],[1,"la",0,69,36,1],[1,"la",0,69,34,1],[1,"plm",2,61,10,0],[1,"s",0,60,11,1],[1,"s",0,61,11,1],[1,"s",0,62,11,1],[1,"s",0,63,11,1],[1,"s",0,64,11,1],[1,"s",0,65,11,1],[1,"s",0,66,11,1],[1,"s",0,67,11,1],[1,"s",0,67,12,1],[1,"s",0,67,13,1],[1,"s",0,67,14,1],[1,"s",0,67,15,1],[1,"s",0,67,16,1],[1,"s",0,67,17,1],[1,"s",0,67,18,1],[1,"s",0,66,18,1],[1,"s",0,65,18,1],[1,"s",0,64,18,1],[1,"s",0,63,18,1],[1,"s",0,62,18,1],[1,"s",0,61,18,1],[1,"s",0,60,18,1],[1,"s",0,60,17,1],[1,"s",0,60,16,1],[1,"s",0,60,15,1],[1,"s",0,60,14,1],[1,"s",0,60,13,1],[1,"s",0,60,12,1],[1,"cs",2,54,10,1],[1,"cs",2,54,9,1],[1,"cs",2,54,8,1],[1,"cs",2,54,7,1],[1,"cs",2,54,6,1],[1,"cs",2,54,5,1],[1,"cs",2,55,4,1],[1,"cs",2,55,5,1],[1,"cs",2,55,6,1],[1,"cs",2,55,7,1],[1,"cs",2,55,8,1],[1,"cs",2,55,9,1],[1,"cs",2,55,10,1],[1,"cs",2,55,3,1],[1,"cs",2,54,3,1],[1,"cs",2,54,4,1],[1,"cs",2,54,1,1],[1,"cs",2,54,2,1],[1,"cs",2,55,2,1],[1,"cs",2,55,1,1],[1,"cs",2,54,0,1],[1,"cs",2,55,0,1],[1,"p",0,52,1,1],[1,"cs",2,90,41,1],[1,"cs",2,89,42,1],[1,"cs",2,90,42,1],[1,"cs",2,88,41,1],[1,"cs",2,89,41,1],[1,"cs",2,87,41,1],[1,"cs",2,86,41,1],[1,"cs",2,85,41,1],[1,"cs",2,84,41,1],[1,"cs",2,82,41,1],[1,"cs",2,83,41,1],[1,"cs",2,81,41,1],[1,"cs",2,80,41,1],[1,"cs",2,79,41,1],[1,"cs",2,79,42,1],[1,"cs",2,80,42,1],[1,"cs",2,81,42,1],[1,"cs",2,83,42,1],[1,"cs",2,82,42,1],[1,"cs",2,84,42,1],[1,"cs",2,86,42,1],[1,"cs",2,85,42,1],[1,"cs",2,88,42,1],[1,"cs",2,87,42,1],[1,"re",0,85,31,1],[1,"re",0,86,31,1],[1,"re",0,87,31,1],[1,"re",0,85,33,1],[1,"re",0,86,33,1],[1,"re",0,87,33,1],[1,"re",0,88,33,1],[1,"re",0,88,31,1],[1,"cs",2,87,39,1],[1,"cs",2,90,39,1],[1,"cs",2,90,40,1],[1,"cs",0,66,65,1],[1,"cs",1,67,59,1],[1,"ma",1,73,62,1],[1,"ma",1,71,62,1],[1,"ma",1,69,62,1],[1,"ma",2,71,66,1],[1,"ma",0,73,63,1],[1,"ma",0,73,64,1],[1,"ma",0,71,63,1],[1,"ma",0,71,64,1],[1,"ma",0,69,63,1],[1,"ma",0,69,64,1],[1,"s",2,72,62,1],[1,"cs",0,74,69,1],[1,"cs",1,69,68,1],[1,"s",2,69,67,1],[1,"la",0,73,30,1],[1,"la",0,75,30,1],[1,"la",0,73,34,1],[1,"la",0,75,34,1],[1,"la",0,73,32,1],[1,"la",0,75,32,1],[1,"ma",1,82,32,1],[1,"la",3,80,32,1],[1,"la",3,81,30,1],[1,"la",3,82,30,1],[1,"la",3,83,34,1],[1,"la",3,82,34,1],[1,"la",3,84,32,1],[1,"de",19,29,23,0],[1,"de",23,30,23,0],[1,"de",23,40,17,0],[1,"de",19,39,24,0],[1,"de",19,42,20,0],[1,"de",19,44,30,0],[1,"de",23,44,23,0],[1,"de",23,40,39,0],[1,"de",23,33,32,0],[1,"de",23,34,32,0],[1,"de",45,32,33,0],[1,"de",44,33,33,0],[1,"de",47,31,30,0],[1,"de",48,32,29,0],[1,"de",41,29,32,0],[1,"de",42,36,35,0],[1,"de",42,35,36,0],[1,"de",42,29,35,0],[1,"de",23,22,37,0],[1,"de",24,23,37,0],[1,"de",20,13,32,0],[1,"de",20,15,42,0],[1,"de",20,16,41,0],[1,"de",20,31,42,0],[1,"de",20,32,43,0],[1,"de",24,32,42,0],[1,"de",24,19,29,0],[1,"de",24,20,30,0],[1,"de",24,18,17,0],[1,"de",24,16,21,0],[1,"de",24,24,19,0],[1,"de",24,25,28,0],[1,"de",24,46,35,0],[1,"de",24,25,42,0],[1,"de",23,45,27,0],[1,"de",23,43,38,0],[1,"de",23,19,24,0],[1,"de",23,44,42,0],[1,"de",23,36,18,0],[1,"de",19,48,28,0],[1,"de",19,49,18,0],[1,"de",19,20,19,0],[1,"de",19,21,43,0],[1,"de",24,6,29,0],[1,"de",24,7,21,0],[1,"de",19,6,20,0],[1,"de",19,24,8,0],[1,"de",23,30,8,0],[1,"de",23,28,7,0],[1,"de",23,45,18,0],[1,"de",48,4,18,0],[1,"de",41,30,21,0],[1,"de",48,42,17,0],[1,"de",48,47,32,0],[1,"de",47,42,41,0],[1,"de",47,26,44,0],[1,"de",41,23,39,0],[1,"de",44,16,35,0],[1,"de",42,22,31,0],[1,"de",42,32,18,0],[1,"cs",0,65,48,1],[1,"cs",1,65,52,1],[1,"cs",1,66,52,1],[1,"cs",1,66,51,1],[1,"cs",1,65,51,1],[1,"cs",2,65,50,1],[1,"cs",2,66,50,1],[1,"cs",2,66,49,1],[1,"cs",2,65,49,1],[1,"cs",2,66,48,1],[1,"cs",1,66,54,1],[1,"cs",0,65,54,1],[1,"cs",2,65,53,1],[1,"cs",2,66,53,1],[1,"de",45,96,31,0],[1,"de",48,92,32,0],[1,"de",49,97,33,0],[1,"de",23,25,25,0],[1,"de",23,24,24,0],[1,"de",19,6,33,0],[1,"de",19,25,2,0],[1,"de",19,6,6,0],[1,"de",19,7,5,0],[1,"ma",3,40,2,1],[1,"ma",3,42,2,1],[1,"s",2,43,2,1],[1,"ma",3,44,2,1],[1,"ma",3,46,2,1],[1,"ma",3,48,2,1],[1,"ma",3,50,2,1],[1,"ma",3,52,2,1],[1,"cs",1,29,49,1],[1,"f",2,12,52,1],[1,"f",2,12,51,1],[1,"f",2,12,49,1],[1,"f",2,12,50,1],[1,"f",2,12,48,1],[1,"f",2,12,47,1],[1,"f",2,11,47,1],[1,"f",2,10,47,1],[1,"f",2,9,47,1],[1,"f",2,8,47,1],[1,"f",2,7,47,1],[1,"f",2,6,47,1],[1,"f",2,5,47,1],[1,"f",2,4,47,1],[1,"f",2,3,47,1],[1,"f",2,2,47,1],[1,"f",2,1,47,1],[1,"f",2,1,48,1],[1,"f",2,1,49,1],[1,"f",2,1,50,1],[1,"f",2,1,51,1],[1,"f",2,1,52,1],[1,"f",2,1,56,1],[1,"f",2,1,54,1],[1,"f",2,1,55,1],[1,"f",2,1,53,1],[1,"f",2,1,57,1],[1,"f",2,1,58,1],[1,"f",2,2,58,1],[1,"f",2,3,58,1],[1,"f",2,8,58,1],[1,"f",2,7,58,1],[1,"f",2,9,58,1],[1,"f",2,10,58,1],[1,"f",2,11,58,1],[1,"f",2,12,58,1],[1,"f",2,12,57,1],[1,"f",2,12,56,1],[1,"f",2,12,55,1],[1,"s",1,12,52,1],[1,"s",1,12,51,1],[1,"s",1,12,50,1],[1,"s",1,12,49,1],[1,"s",1,12,48,1],[1,"s",1,11,47,1],[1,"s",1,10,47,1],[1,"s",1,9,47,1],[1,"s",1,8,47,1],[1,"s",1,7,47,1],[1,"s",1,5,47,1],[1,"s",1,4,47,1],[1,"s",1,3,47,1],[1,"s",1,2,47,1],[1,"s",1,1,47,1],[1,"s",1,1,48,1],[1,"s",1,1,49,1],[1,"s",1,1,51,1],[1,"s",1,1,52,1],[1,"s",1,1,53,1],[1,"s",1,1,54,1],[1,"s",1,1,55,1],[1,"s",1,1,56,1],[1,"s",1,1,57,1],[1,"s",1,1,58,1],[1,"s",1,2,58,1],[1,"s",1,3,58,1],[1,"s",1,7,58,1],[1,"s",1,8,58,1],[1,"s",1,9,58,1],[1,"s",1,11,58,1],[1,"s",1,12,58,1],[1,"s",1,12,57,1],[1,"s",1,12,56,1],[1,"s",1,12,55,1],[1,"g",1,12,52,1],[1,"g",1,12,51,1],[1,"g",1,12,49,1],[1,"g",1,12,48,1],[1,"g",1,12,47,1],[1,"g",1,11,47,1],[1,"g",1,8,47,1],[1,"g",1,5,47,1],[1,"g",1,4,47,1],[1,"g",1,3,47,1],[1,"g",1,1,48,1],[1,"g",1,1,50,1],[1,"g",1,1,51,1],[1,"g",1,1,52,1],[1,"g",1,1,53,1],[1,"g",1,1,55,1],[1,"g",1,1,56,1],[1,"g",1,1,58,1],[1,"g",1,2,58,1],[1,"g",1,11,58,1],[1,"g",1,12,58,1],[1,"g",1,12,57,1],[1,"g",1,12,56,1],[1,"g",1,12,55,1],[1,"d",1,12,52,1],[1,"d",1,12,51,1],[1,"d",1,12,49,1],[1,"d",1,12,48,1],[1,"d",1,12,47,1],[1,"d",1,11,47,1],[1,"d",1,9,47,1],[1,"d",1,7,47,1],[1,"d",1,1,48,1],[1,"d",1,1,51,1],[1,"d",1,1,53,1],[1,"d",1,1,54,1],[1,"d",1,1,55,1],[1,"d",1,1,56,1],[1,"d",1,1,57,1],[1,"d",1,1,58,1],[1,"d",1,2,58,1],[1,"d",1,3,58,1],[1,"d",1,7,58,1],[1,"d",1,8,58,1],[1,"d",1,9,58,1],[1,"d",1,10,58,1],[1,"d",1,11,58,1],[1,"d",1,12,58,1],[1,"d",1,12,57,1],[1,"d",1,12,56,1],[1,"d",1,12,55,1],[1,"a",0,12,52,1],[1,"a",0,12,50,1],[1,"a",0,12,49,1],[1,"a",0,12,48,1],[1,"a",0,12,47,1],[1,"a",0,11,47,1],[1,"a",0,10,47,1],[1,"a",0,8,47,1],[1,"a",0,7,47,1],[1,"a",0,6,47,1],[1,"a",0,5,47,1],[1,"a",0,4,47,1],[1,"a",0,3,47,1],[1,"a",0,1,47,1],[1,"a",0,1,48,1],[1,"a",0,1,49,1],[1,"a",0,1,51,1],[1,"a",0,1,53,1],[1,"a",0,1,54,1],[1,"a",0,1,55,1],[1,"a",0,1,56,1],[1,"a",0,1,57,1],[1,"a",0,1,58,1],[1,"a",0,2,58,1],[1,"a",0,3,58,1],[1,"a",0,7,58,1],[1,"a",0,8,58,1],[1,"a",0,9,58,1],[1,"a",0,10,58,1],[1,"a",0,11,58,1],[1,"a",0,12,58,1],[1,"a",0,12,57,1],[1,"a",0,12,55,1],[1,"re",2,12,52,1],[1,"re",2,12,51,1],[1,"re",2,11,47,1],[1,"re",2,8,47,1],[1,"re",2,2,47,1],[1,"re",2,1,47,1],[1,"re",2,1,48,1],[1,"re",2,3,47,1],[1,"re",2,4,47,1],[1,"re",2,5,47,1],[1,"re",2,6,47,1],[1,"re",2,10,47,1],[1,"re",2,1,49,1],[1,"re",2,1,50,1],[1,"re",2,1,51,1],[1,"re",2,1,52,1],[1,"re",2,1,53,1],[1,"re",2,1,54,1],[1,"re",2,1,55,1],[1,"re",2,1,57,1],[1,"re",2,1,58,1],[1,"re",2,2,58,1],[1,"re",2,3,58,1],[1,"re",2,7,58,1],[1,"re",2,8,58,1],[1,"re",2,9,58,1],[1,"re",2,10,58,1],[1,"re",2,11,58,1],[1,"re",2,12,58,1],[1,"re",2,12,57,1],[1,"re",2,12,56,1],[1,"re",2,12,55,1],[1,"s",2,6,58,1],[1,"s",2,4,58,1],[1,"m",2,84,37,1],[1,"m",2,83,37,1],[1,"re",2,84,37,1],[1,"re",2,83,37,1],[1,"d",0,83,37,1],[1,"t",0,84,37,0],[1,"t",0,83,37,0],[1,"m",2,84,27,1],[1,"m",2,83,27,1],[1,"re",2,84,27,1],[1,"re",2,83,27,1],[1,"t",0,84,27,0],[1,"t",0,83,27,0],[1,"cs",0,82,27,1],[1,"re",2,67,16,1],[1,"re",2,67,17,1],[1,"re",2,67,18,1],[1,"re",2,65,18,1],[1,"re",2,66,18,1],[1,"re",2,63,18,1],[1,"re",2,64,18,1],[1,"re",2,61,18,1],[1,"re",2,62,18,1],[1,"re",2,60,17,1],[1,"re",2,60,16,1],[1,"re",2,60,15,1],[1,"re",2,60,14,1],[1,"re",2,60,13,1],[1,"re",2,60,12,1],[1,"re",2,60,11,1],[1,"re",2,61,11,1],[1,"re",2,62,11,1],[1,"re",2,63,11,1],[1,"re",2,64,11,1],[1,"re",2,65,11,1],[1,"re",2,66,11,1],[1,"re",2,67,11,1],[1,"re",2,67,12,1],[1,"re",2,67,13,1],[1,"re",2,67,14,1],[1,"re",2,67,15,1],[1,"a",0,67,15,1],[1,"a",0,67,14,1],[1,"a",0,67,13,1],[1,"a",0,67,12,1],[1,"a",0,67,11,1],[1,"a",0,65,11,1],[1,"a",0,66,11,1],[1,"a",0,63,11,1],[1,"a",0,62,11,1],[1,"a",0,60,11,1],[1,"a",0,60,12,1],[1,"a",0,60,13,1],[1,"a",0,60,14,1],[1,"a",0,60,15,1],[1,"a",0,60,16,1],[1,"a",0,60,17,1],[1,"a",0,60,18,1],[1,"a",0,61,18,1],[1,"a",0,62,18,1],[1,"a",0,64,18,1],[1,"a",0,63,18,1],[1,"a",0,65,18,1],[1,"a",0,66,18,1],[1,"a",0,67,18,1],[1,"a",0,67,17,1],[1,"a",0,67,16,1],[1,"d",0,67,16,1],[1,"d",0,67,17,1],[1,"d",0,66,18,1],[1,"d",0,65,18,1],[1,"d",0,64,18,1],[1,"d",0,63,18,1],[1,"d",0,62,18,1],[1,"d",0,61,18,1],[1,"d",0,60,18,1],[1,"d",0,60,17,1],[1,"d",0,60,16,1],[1,"d",0,60,15,1],[1,"d",0,60,14,1],[1,"d",0,60,13,1],[1,"d",0,60,12,1],[1,"d",0,60,11,1],[1,"d",0,61,11,1],[1,"d",0,62,11,1],[1,"d",0,63,11,1],[1,"d",0,64,11,1],[1,"d",0,65,11,1],[1,"d",0,66,11,1],[1,"d",0,67,11,1],[1,"d",0,67,12,1],[1,"d",0,67,13,1],[1,"d",0,67,14,1],[1,"d",0,67,15,1],[1,"la",2,66,13,1],[1,"la",2,65,13,1],[1,"re",2,63,14,1],[1,"re",2,63,15,1],[1,"re",2,64,15,1],[1,"a",0,63,14,1],[1,"a",0,63,15,1],[1,"a",0,64,15,1],[1,"ma",1,31,44,1],[1,"de",9,83,79,0],[1,"m",2,33,6,1],[1,"m",2,34,9,1],[1,"m",2,33,9,1],[1,"m",2,32,9,1],[1,"m",2,75,24,1],[1,"m",2,74,24,1],[1,"m",2,73,24,1],[1,"m",2,72,24,1],[1,"m",2,71,24,1],[1,"m",2,69,24,1],[1,"m",2,70,24,1],[1,"m",2,32,6,1],[1,"cs",3,34,8,1],[1,"cs",3,34,7,1],[1,"cs",3,74,23,1],[1,"cs",3,73,23,1],[1,"cs",3,72,23,1],[1,"cs",3,71,23,1],[1,"cs",3,70,23,1],[1,"cs",3,69,23,1],[1,"cs",3,34,6,1],[1,"cs",3,33,6,1],[1,"cs",3,32,6,1],[1,"de",22,71,63,0],[1,"de",22,69,65,0],[1,"de",22,71,66,0],[1,"a",1,68,61,1],[1,"a",1,70,61,1],[1,"a",1,72,61,1],[1,"a",1,74,61,1],[1,"a",1,73,66,1],[1,"a",1,69,66,1],[1,"cs",3,3,27,1],[1,"cs",3,3,36,1],[1,"cs",1,3,35,1],[1,"cs",1,3,33,1],[1,"cs",1,3,34,1],[1,"cs",1,3,30,1],[1,"cs",1,3,29,1],[1,"cs",1,3,28,1],[1,"ma",0,3,32,1],[1,"ma",0,3,31,1],[1,"t",3,74,41,0],[1,"t",3,73,41,0],[1,"t",3,72,41,0],[1,"t",3,71,41,0],[1,"t",3,69,41,0],[1,"t",3,70,41,0],[1,"a",2,74,41,1],[1,"a",2,73,41,1],[1,"a",2,72,41,1],[1,"a",2,71,41,1],[1,"a",2,70,41,1],[1,"a",2,69,41,1],[1,"t",2,75,41,0],[1,"t",2,76,41,0],[1,"re",1,76,41,1],[1,"re",1,75,41,1],[1,"re",1,74,41,1],[1,"re",1,73,41,1],[1,"re",1,72,41,1],[1,"re",1,71,41,1],[1,"re",1,70,41,1],[1,"re",1,69,41,1],[1,"g",2,76,41,1],[1,"g",2,75,41,1],[1,"g",2,74,41,1],[1,"g",2,73,41,1],[1,"g",2,72,41,1],[1,"g",2,71,41,1],[1,"g",2,70,41,1],[1,"g",2,69,41,1],[1,"cs",2,7,10,1],[1,"cs",2,34,46,1],[1,"cs",2,36,46,1],[1,"cs",2,35,48,1],[1,"cs",2,35,49,1],[1,"cs",2,35,50,1],[1,"cs",2,34,50,1],[1,"cs",2,34,49,1],[1,"cs",2,36,50,1],[1,"cs",2,36,51,1],[1,"cs",2,34,51,1],[1,"cs",2,35,47,1],[1,"cs",2,35,46,1],[1,"cs",2,35,45,1],[1,"cs",1,36,45,1],[1,"cs",1,34,45,1],[1,"cs",1,36,48,1],[1,"cs",1,34,48,1],[1,"cs",0,36,47,1],[1,"cs",0,35,51,1],[1,"cs",3,36,49,1],[1,"cs",3,34,47,1],[1,"cs",2,31,65,1],[1,"cs",2,33,64,1],[1,"cs",2,33,62,1],[1,"cs",2,32,61,1],[1,"cs",2,34,60,1],[1,"cs",2,34,61,1],[1,"cs",2,34,62,1],[1,"cs",2,34,59,1],[1,"cs",2,33,61,1],[1,"cs",2,33,63,1],[1,"cs",2,32,63,1],[1,"cs",2,32,65,1],[1,"cs",2,34,65,1],[1,"cs",2,33,65,1],[1,"cs",2,32,64,1],[1,"cs",2,34,64,1],[1,"cs",1,34,63,1],[1,"cs",1,32,62,1],[1,"cs",2,30,60,1],[1,"cs",2,30,57,1],[1,"cs",2,30,58,1],[1,"cs",2,30,59,1],[1,"cs",2,31,57,1],[1,"cs",2,32,57,1]]
+      },
+      "welcomeMessage": "#ff0000 Welcome to ZMA Beta v1\n#00ffaf Kills = Rewards && Berries\n#00ffaf Berries Required To AFK\n#00ffaf Top Right Forest is Trade Shop\n#00ffaf Top Forest Is Gambling Spot\n#3454FB Our Discord: []\n#3454FB Totem Max Players = 16 ENJOYY\n#FBDA2C ====================",
+  "kit": [
+    "DRAGON_SWORD",
+    1,
+    "DRAGON_HELMET",
+    1,
+    "DRAGON_SPEAR",
+    1,
+    "GOLD_SPIKE",
+    3,
+    "HAMMER_GOLD",
+    1,
+    "CROWN_GREEN",
+    1
+  ],
+  "kit2": [
+    "LAVA_SWORD",
+    1,
+    "LAVA_HELMET",
+    1,
+    "LAVA_SPEAR",
+    1,
+    "BANDAGE",
+    20,
+    "DIAMOND_SPIKE",
+    20,
+    "BABY_DRAGON",
+    1,
+    "HAMMER_REIDITE",
+    1,
+    "FIREFLY",
+    15,
+    "CROWN_GREEN",
+    1
+  ],
+  "christmas": [
+    ["CROWN_BLUE", 1, 0.001],
+    ["SANTA_HAT", 1, 0.008],
+    ["ELF_HAT", 1, 0.08],
+    ["WAND1", 1, 0.2],
+    ["CANDY", 50, 0.3],
+    ["DIVING_MASK", 1, 0.6],
+    ["PIRATE_SWORD", 1, 0.5],
+    ["PIRATE_HAT", 1, 0.6],
+    ["DIAMOND_SPIKE", 2, 45.7],
+    ["CANDY", 5, 52.1]
+  ]
+}

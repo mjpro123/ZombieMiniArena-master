@@ -1,0 +1,7 @@
+{
+    "http_port": 8081,
+    "websocket_port": 8082,
+    "server_version": 1,
+    "env_mode": "PROD",
+    "isSSL": false
+}
